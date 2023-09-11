@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #E6AA6F;
+    align-items: center;
+    width: 100%;
+}
+ul{
+    display: flex;
+    margin-inline: 20px;
+}
+ul li{
+    margin-inline: 20px;
+}
