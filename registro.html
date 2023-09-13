@@ -10,13 +10,57 @@
         <title> [Nombre pagina] | Registro </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/styleLogin.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
+        <section>
+            <h2>Registrarse</h2>
+            <p>o</p>
+            <button href="login.html">Iniciar sesión</button>
+        </section>
+        <section id="Login">
+            <form >
+                <h2>Registrate</h2>
+                <input type="text" placeholder="Nombre de usuario">
+                <br/>
+
+                <input type="text" placeholder="Rut">
+                <br/>
+
+                <input type="email" placeholder="Email">
+                <br/>
+
+                <select id="sel_region">
+                    <option value="Selecciona tu region">Selecciona tu region</option>
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                </select>
+                <br/>
+
+                <input type="text" placeholder="Comuna">
+                <br/>
+
+                <input type="password" placeholder="Contraseña">
+                <br/>
+
+                <input type="password" placeholder="Confirmar Contraseña">
+                <br/>
+                
+                <div id="TermYcond">
+                    <input type="checkbox" id="check"/>
+                    <label><a href="terminosYcondiciones">Acepto terminos y condiciones</a> </label>
+                </div>
+                <br/>
+
+                <button type="submit">Registrarse</button>
+            </form>
+
+        </section>
         <script src="" async defer></script>
     </body>
 </html>
+
+

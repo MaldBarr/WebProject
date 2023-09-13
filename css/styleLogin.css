@@ -22,3 +22,9 @@ form{
     justify-content: center;
     align-items: center;
 }
+
+#check{
+    display: inline;
+    text-align: left !important;
+    align-items: left !important; 
+}
