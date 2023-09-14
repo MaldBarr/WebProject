@@ -28,3 +28,7 @@ form{
     text-align: left !important;
     align-items: left !important; 
 }
+
+button{
+    cursor: pointer;
+}
