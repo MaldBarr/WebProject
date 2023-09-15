@@ -25,19 +25,19 @@
             </div>
         </section>
         <section id="Login">
-            <form >
+            <form id="Registro" novalidate>
                 <h2>Registrate</h2>
-                <input type="text" placeholder="Nombre de usuario">
+                <input type="text" placeholder="Nombre de usuario" required>
                 <br/>
 
-                <input type="text" placeholder="Rut">
+                <input type="text" placeholder="Rut" id="rut" name="rut" required>
                 <br/>
 
-                <input type="email" placeholder="Email">
+                <input type="email" placeholder="Email" required>
                 <br/>
 
-                <select id="sel_region">
-                    <option value="Selecciona tu region">Selecciona tu region</option>
+                <select id="sel_region" name="sel_region" required>
+                    <option value="" selected disabled hidden>Selecciona Region</option>
                     <option value="I">I</option>
                     <option value="II">II</option>
                     <option value="III">III</option>
@@ -46,18 +46,18 @@
                 </select>
                 <br/>
 
-                <input type="text" placeholder="Comuna">
+                <input type="text" placeholder="Comuna" required>
                 <br/>
 
-                <input type="password" placeholder="Contraseña">
+                <input type="password" placeholder="Contraseña" required>
                 <br/>
 
-                <input type="password" placeholder="Confirmar Contraseña">
+                <input type="password" placeholder="Confirmar Contraseña" required>
                 <br/>
                 
                 <div id="TermYcond">
-                    <input type="checkbox" id="check"/>
-                    <label><a href="terminosYcondiciones">Acepto terminos y condiciones</a> </label>
+                    <input type="checkbox" id="check" required/>
+                    <label><a href="terminosYcondiciones.md">Acepto terminos y condiciones</a> </label>
                 </div>
                 <br/>
 
@@ -65,7 +65,7 @@
             </form>
 
         </section>
-        <script src="" async defer></script>
+        <script src="scripts/scriptRegistro.js" async defer></script>
     </body>
 </html>
 
