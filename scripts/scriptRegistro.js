@@ -1,12 +1,13 @@
 //$.getJSON("JSON/regiones.JSON")
 
-export function cargaRegional(){
+function cargaRegional(){
     const select = $('#sel_region');
     select.append(regiones.map(region => `<option value="${region.id}">${region.nombre}</option>`));
 }
 
 
-function validaDV(rut) {
+function validaDV() {
+    var rut = document.getElementById("rut");
     // Se separa el número del dígito verificador
     const [numero, dv] = rut.replace('-K', '-k').split('-');
 
@@ -21,15 +22,6 @@ function validaDV(rut) {
     })(numero);
 
     // Se compara el dígito verificador calculado con el ingresado
+    console.log(dvVer == dv);
     return dvVer == dv;
 }
-
-export default () => {
-    $.validator.addMethod('rut', function (value, element) {
-        return this.optional(element) || /^[0-9]{7,8}-[0-9Kk]{1}$/.test(value);
-    }, 'El RUT ingresado es inválido');
-
-    $.validator.addMethod('rutdv', function(value, element) {
-        return this.optional(element) || validaDV(value);
-    }, 'El dígito verificador del RUT es inválido');
-};
