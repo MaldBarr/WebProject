@@ -4,7 +4,7 @@ Las paginas pizarras, proyectos y cuenta trabajan entre si y pizarra no tiene co
 
 
 Mockups>
-https://www.figma.com/file/zr85F9wskgEDXGb7bYb7MG/Mockups-web?type=design&node-id=0-1&mode=design&t=u07dn0gsfJpTfYkK-0
+https://www.figma.com/file/zr85F9wskgEDXGb7bYb7MG/Mockups-web?type=design&node-id=0%3A1&mode=design&t=0buhvuCJ6ypWkEjV-1
 
 Requerimientos>
 https://docs.google.com/document/d/1EkHNta9dCWN_hbb4jU9PrQKA5bLmuUdeKJ3zNUsZqpk/edit?usp=sharing
