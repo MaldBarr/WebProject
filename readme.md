@@ -1,13 +1,5 @@
 Las paginas: cuenta, pizzarra y proyectos, dependen de que el usuario este registrado. 
-
-
-
-
-
-
-
-
-
+Las paginas pizarras, proyectos y cuenta trabajan entre si y pizarra no tiene conexion, se abre por su cuenta actualmente
 
 
 
