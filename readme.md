@@ -1,3 +1,16 @@
+Las paginas: cuenta, pizzarra y proyectos, dependen de que el usuario este registrado. 
+
+
+
+
+
+
+
+
+
+
+
+
 Mockups>
 https://www.figma.com/file/zr85F9wskgEDXGb7bYb7MG/Mockups-web?type=design&node-id=0-1&mode=design&t=u07dn0gsfJpTfYkK-0
 
