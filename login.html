@@ -9,16 +9,17 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styleLogin.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     </head>
     <body>
         <section id="Login">
             <form>
                 <h2>Identificate</h2>
                 <p>Usa tu email y contraseña para Identificarte</p>
-                <input type="email" placeholder="Email" required>
-                <br/>
-                <input type="password" placeholder="Contraseña" required>
-                <br/>
+                <input type="email" placeholder="Email" id="email" required>
+                <p id="1"></p>
+                <input type="password" placeholder="Contraseña" id="password" required>
+                <p id="2"></p>
                 <button type="submit">Iniciar sesión</button>
             </form>
         </section>
@@ -32,6 +33,6 @@
                 </div>
             </div>
         </section>
-        <script src="" async defer></script>
+        <script src="scripts/scriptLogin.js" async defer></script>
     </body>
 </html>
