@@ -14,7 +14,6 @@ import Soporte from './pages/Soporte';
 import Inicio from './pages/inicio';
 import App from './App';
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* CUANDO SE CREE UN ARCHIVO EN CARPETA PAGES QUE EMPIECE CON UNA MAYUSCULA*/}
