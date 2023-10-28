@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 function Registro() {
     return (
@@ -9,10 +10,12 @@ function Registro() {
             <h2>Registrarse</h2>
             <p>o</p>
             <div>
-                <button onclick="window.location.href = 'login.html'">
-                Iniciar sesión
-                </button>
-                <button onclick="window.location.href = 'index.html'">Inicio</button>
+                <Link to={'/Login'}>
+                    <button>
+                    Iniciar sesion
+                    </button>
+                </Link>
+                <Link to={'/InicioPagina'}><button>Inicio</button></Link>
             </div>
             </div>
         </section>

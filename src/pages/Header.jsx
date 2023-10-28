@@ -5,7 +5,7 @@ function Header() {
     return (
         <>
         <header>
-            <img src="images/Logo.png" />
+            <Link to={'/InicioPagina'}><img src="public/Logo.png" /></Link>
             <ul>
               <Link to={"/aboutus"}>
                 <li>Sobre<br />Nosotros</li>

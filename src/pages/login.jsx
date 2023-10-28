@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 function Login(){
     return (
@@ -25,12 +26,12 @@ function Login(){
             <h2>Iniciar sesión</h2>
             <p>o</p>
             <div>
-                <button onclick="window.location.href = 'registro.html'">
-                Crear cuenta
-                </button>
-
-                
-                <button onclick="window.location.href = 'index.html'">Inicio</button>
+                <Link to={'/Registro'}>
+                    <button>
+                    Crear cuenta
+                    </button>
+                </Link>
+                <Link to={'/InicioPagina'}><button>Inicio</button></Link>
             </div>
             </div>
         </section>

@@ -11,8 +11,7 @@ function Cuenta() {
             </div>
             <div>
             <button>DatosPersonales</button> <br />
-            <button>ConfigurarCuenta</button>
-            <br />
+            <button>ConfigurarCuenta</button><br />
             <button>Cerrar Sesion</button>
             </div>
         </main>
