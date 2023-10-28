@@ -1,11 +1,11 @@
 import {React,useState} from 'react';
 import {Link} from 'react-router-dom';
-import Login from './login';
+import Header from './Header';
 
 function Inicio() {
     return (
         <>
-        <Login />
+        <Header/>
         <div>
           <main>
             <div id="createDiagram">
