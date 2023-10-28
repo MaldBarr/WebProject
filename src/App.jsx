@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
+import {Link} from 'react-router-dom';
+
 import reactLogo from './assets/react.svg'
 import Logo from '/Logo.png'
+
 import './App.css'
-import Index from './index'
+
 
 function App() {
   const [showIndex, setIndex] = useState(false);
@@ -17,8 +20,12 @@ function App() {
       </div>
       <h1>BinaryTREE + React</h1>
       <div className="card">
-        <button onClick={toggleIndex}>Cargar Pagina</button>
-        {showIndex && <Index />}
+        <Link to={"/inicioPagina"}>
+          <button onClick={toggleIndex}>Cargar Pagina</button> 
+        </Link>
+
+        {/* {showIndex && <Index />} */}
+
       </div>
     </>
   )
