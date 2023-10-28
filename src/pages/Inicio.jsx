@@ -1,10 +1,11 @@
 import {React,useState} from 'react';
 import {Link} from 'react-router-dom';
-
+import Login from './login';
 
 function Inicio() {
     return (
         <>
+        <Login />
         <div>
           <main>
             <div id="createDiagram">
