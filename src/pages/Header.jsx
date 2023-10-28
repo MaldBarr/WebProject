@@ -1,14 +1,15 @@
 import {Link} from 'react-router-dom';
 import {React,useState} from 'react';
+import style from '/css/Header.css'
 
 function Header() {
     return (
         <>
-        <header>
-            <Link to={'/InicioPagina'}><img src="public/Logo.png" /></Link>
-            <ul>
+        <header className = {style.Header}>
+            <Link to={'/InicioPagina'}><img className={style.img} src="public/Logo.png" /></Link>
+            <ul className={style.ul}>
               <Link to={"/aboutus"}>
-                <li>Sobre<br />Nosotros</li>
+                <li className={style.li}>Sobre<br />Nosotros</li>
               </Link>
               <li>
                 <Link  to={"/login"}> 
@@ -21,7 +22,6 @@ function Header() {
                 </Link>
                 </li>
             </ul>
-            <b> SOY UN HEADER </b>
         </header>
         </>
     );

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from './Header';
 import Footer from './Footer';
+import style from '/css/aboutUs.css';
 
 function AboutUs() {
     return (
@@ -15,7 +16,7 @@ function AboutUs() {
           <link rel="stylesheet" href="css/styles.css" />
           <link rel="stylesheet" href="css/aboutUsStyle.css" />
           <main>
-            <div>
+            <div  className={style.div}>
               <span>Somos tres estudiantes de la carrera: "ingenieria en ejecucion informatica", que actualmente</span><br />
               <span>nos encontramos curzando el ramo de "ingenieria web", donde como proyecto a presentar, nacio:</span><br />
               <span>BINARY TREE</span>
