@@ -11,7 +11,7 @@ function AboutUs() {
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <title>aboutUs</title>
-          <meta name="description" content />
+          <meta name="description" content =" Sobre nuestro equipo de Binary Three "/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="css/styles.css" />
           <link rel="stylesheet" href="css/aboutUsStyle.css" />
@@ -23,8 +23,8 @@ function AboutUs() {
             </div>
           </main>
         
-        </div>
-        <Footer/>
+      </div>
+      <Footer/>
       </>
     );
 }
