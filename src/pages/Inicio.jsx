@@ -8,7 +8,7 @@ function Inicio() {
     return (
         <>
         <Header/>
-        <body className={style.body}>
+        <div className={style.body}>
           <div className={style.div}>
             <main>
               <div id="createDiagram" className={style.createDiagram}>
@@ -31,7 +31,7 @@ function Inicio() {
               </Link>
             </main>
           </div>
-        </body>
+        </div>
         <Footer/>
         </>
       );
