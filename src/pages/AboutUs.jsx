@@ -22,8 +22,9 @@ function AboutUs() {
               <span>BINARY TREE</span>
             </div>
           </main>
-          <Footer/>
+        
         </div>
+        <Footer/>
       </>
     );
 }

@@ -1,7 +1,10 @@
 import React from "react";
 import Footer from './Footer';
+import Header from './Header';
+
 function Proyectos() {
     return (<>
+    <Header/>
     <div>
     <main>
         <div id="sidebar" className="active">

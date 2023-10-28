@@ -3,29 +3,6 @@
   padding: 0;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #E6AA6F;
-  align-items: center;
-  width: 100%;
-  padding: 30px 0;
-}
-
-header ul {
-  list-style: none;
-  display: flex;
-  margin-inline: 20px;
-}
-
-ul li {
-  margin-inline: 20px;
-}
-
-img {
-  max-height: 90px;
-}
-
 #sidebar {
   position: fixed;
   width: 200px;
@@ -39,7 +16,7 @@ img {
   left: 0;
 }
 
-#sidebar ul li {
+ul li {
   text-align: center;
   position: relative;
   margin-bottom: 10px;
@@ -61,4 +38,4 @@ img {
   text-align: center;
 }
 
-/*# sourceMappingURL=pizarra.css.map */
+/*# sourceMappingURL=Pizarra.css.map */

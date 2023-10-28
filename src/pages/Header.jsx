@@ -9,7 +9,7 @@ function Header() {
             <Link to={'/InicioPagina'}><img className={style.img} src="public/Logo.png" /></Link>
             <ul className={style.ul}>
               <Link to={"/aboutus"}>
-                <li className={style.li}>Sobre<br />Nosotros</li>
+                <li className={style.li}> Sobre<br/>Nosotros</li>
               </Link>
               <li>
                 <Link  to={"/login"}> 

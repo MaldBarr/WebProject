@@ -1,4 +1,5 @@
 import React from "react";
+import style from '/css/Cuenta.css';
 
 function Cuenta() {
     return (
@@ -10,9 +11,9 @@ function Cuenta() {
             <h2>Usuario</h2>
             </div>
             <div>
-            <button>DatosPersonales</button> <br />
-            <button>ConfigurarCuenta</button><br />
-            <button>Cerrar Sesion</button>
+            <button className={style.button}>DatosPersonales</button> <br />
+            <button className={style.button}>ConfigurarCuenta</button><br />
+            <button className={style.button}>Cerrar Sesion</button>
             </div>
         </main>
         </div>
