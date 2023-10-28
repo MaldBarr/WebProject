@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #E6AA6F;
+  align-items: center;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin-inline: 20px;
+}
+
+ul li {
+  margin-inline: 20px;
+}
+
+img {
+  max-height: 90px;
+}
+
+main {
+  width: 100%;
+  height: 80%;
+  display: block;
+}
+
+footer {
+  background-color: gray;
+  display: block;
+}
+
+/*# sourceMappingURL=soporte.css.map */

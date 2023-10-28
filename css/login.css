@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  display: flex;
+  background-color: #E62A44;
+}
+
+section {
+  min-width: 50%;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#Login {
+  background-color: antiquewhite;
+}
+
+input {
+  font-size: larger;
+}
+
+form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+#check {
+  display: inline;
+  text-align: left !important;
+  align-items: left !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=login.css.map */

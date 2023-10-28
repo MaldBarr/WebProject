@@ -1,6 +1,8 @@
 # React + Vite
 
 npm install vite --save-dev
+npm install react-router-dom@6
+npm install -g sass
 
 Las paginas: cuenta, pizzarra y proyectos, dependen de que el usuario este registrado.
 

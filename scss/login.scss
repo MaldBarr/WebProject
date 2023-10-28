@@ -1,0 +1,39 @@
+$background: antiquewhite;
+$minwidth: 50%;
+$altura: 100vh;
+$red: #E62A44;
+
+body{
+    margin: 0;
+    display: flex;
+    background-color: $red;
+}
+section{
+    min-width: $minwidth;
+    min-height: $altura;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#Login{
+    background-color: $background;
+}
+input{
+    font-size: larger;
+}
+form{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#check{
+    display: inline;
+    text-align: left !important;
+    align-items: left !important; 
+}
+
+button{
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+$background: antiquewhite;
+$minwidth: 100%;
+$altura: 100vh;
+
+div{
+    background-color: $background;
+    display: block;
+    height: $altura;
+    width: $minwidth;
+    text-align: center;
+}
