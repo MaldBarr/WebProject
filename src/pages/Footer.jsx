@@ -16,7 +16,6 @@ function Footer() {
                     </svg>
                 </Link>
                 </div>
-
             </footer>
         </>
     );

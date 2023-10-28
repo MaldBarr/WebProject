@@ -21,7 +21,7 @@ function Header() {
                 </Link>
                 </li>
             </ul>
-            <b> SOY UN PUTO HEADER </b>
+            <b> SOY UN HEADER </b>
         </header>
         </>
     );
