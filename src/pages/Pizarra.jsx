@@ -1,7 +1,7 @@
 import React from "react";
 import Header from './Header';
 import Footer from './Footer';
-import style from '/css/Pizarra.css'
+import style from '/css/Pizarra.css?inline'
 import {Link} from 'react-router-dom';
 
 function Pizarra(){
