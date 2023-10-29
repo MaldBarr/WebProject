@@ -1,6 +1,13 @@
+$width : 100%;
 footer{
+    display: flex;
     position: absolute;
     text-align: right;
     width: $width;
     height: 10%;
+}
+
+div{
+    display: flex;
+    align-items: end;
 }
