@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import FetchRegiones from "../assets/fetchRegiones.jsx";
 
 function Registro() {
     return (
@@ -33,19 +34,11 @@ function Registro() {
             <p id={2} />
             <input type="email" placeholder="Email" id="Email" required="" />
             <p id={3} />
-            <select id="sel_region" name="sel_region" required="">
-                <option value="" selected="" disabled="" hidden="">
-                Selecciona Region
-                </option>
-                <option value="I">I</option>
-                <option value="II">II</option>
-                <option value="III">III</option>
-                <option value="IV">IV</option>
-                <option value="V">V</option>
-            </select>
+            <FetchRegiones/>
             <p id={4} />
             <input type="text" placeholder="Comuna" id="comuna" required="" />
             <p id={5} />
+            
             <input
                 type="password"
                 placeholder="Contraseña"
