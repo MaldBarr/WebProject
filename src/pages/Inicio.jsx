@@ -1,7 +1,7 @@
 import {React,useState} from 'react';
 import {Link} from 'react-router-dom';
 import Header from './Header';
-import style from '/css/Inicio.css?inline';
+import style from '/css/Inicio.css';
 import Footer from './Footer';
 
 function Inicio() {
