@@ -7,13 +7,15 @@ function fetchRegiones() {
         setRegiones(regionesJSON);
     }, []);
     return (
-        <select id="sel_region" name="sel_region" required="">
-            {regiones.map((data,i) => (
-                <option value={i} key={i}>
-                    {data.region}
-                </option>
-            ))}
-        </select>
+        <>
+            <select id="sel_region" name="sel_region" required="">
+                {regiones.map((data,i) => (
+                    <option value={i} key={i}>
+                        {data.region}
+                    </option>
+                ))}
+            </select>
+        </>
     )
 }
 
