@@ -1,13 +1,13 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import FetchRegiones from "../assets/fetchRegiones.jsx";
-import styles from '/css/'
+import styles from '/css/login.css?inline';
 
 function Registro() {
     return (
         <>
-        <div>
-            <section>
+        <div className={styles.body}>
+            <section className={styles.section}>
                 <div>
                     <h2>Registrarse</h2>
                     <p>o</p> 
@@ -18,7 +18,7 @@ function Registro() {
                 </div>
             </section>
 
-            <section id="Login">
+            <section id="Login" className={styles.section}>
                 <form id="Registro" noValidate="">
                     <h2>Registrate</h2>
                     <input

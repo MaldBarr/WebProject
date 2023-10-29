@@ -3,11 +3,17 @@ $minwidth: 50%;
 $altura: 100vh;
 $red: #E62A44;
 
+*{
+    margin: 0px !important;
+    padding: 0px !important;
+}
 body{
     margin: 0;
-    display: flex;
+    padding: 0;
+    display: flex !important;
     background-color: $red;
 }
+
 section{
     min-width: $minwidth;
     min-height: $altura;
@@ -16,9 +22,7 @@ section{
     justify-content: center;
     text-align: center;
 }
-#Login{
-    background-color: $background;
-}
+
 input{
     font-size: larger;
 }
