@@ -16,7 +16,7 @@ function Inicio() {
                   <span>Creador y visualizador </span> <br />
                   <span>de estructura de datos</span> <br />
                   <span>descripcion</span> <br /> <br />
-                  <button>Crear diagrama</button>
+                  <Link to={'/Pizarra'}><button>Crear diagrama</button></Link>
                 </div>
               </div>
               <div id="showDiagram">
