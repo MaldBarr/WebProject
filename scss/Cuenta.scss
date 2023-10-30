@@ -19,11 +19,11 @@ ul{
     list-style: none;
     display: flex;
     margin-inline: 20px;
+    li{
+        margin-inline: 20px;
+    }
 }
-ul li{
 
-    margin-inline: 20px;
-}
 img{
     max-height: 90px;
 }

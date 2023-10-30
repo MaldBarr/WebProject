@@ -19,11 +19,12 @@ ul{
     list-style: none;
     display: flex;
     margin-inline: 20px;
-}
-ul li{
+    li{
 
-    margin-inline: 20px;
+        margin-inline: 20px;
+    }
 }
+
 img{
     max-height: 90px;
 }
@@ -32,7 +33,6 @@ main{
     width: $minwidth;
     height: 80%;
     display: block;
-    
 }
 
 footer{
