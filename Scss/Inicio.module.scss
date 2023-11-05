@@ -1,0 +1,43 @@
+$background: rgb(249, 106, 106);
+$width: 100%;
+$carton: #E6AA6F;
+
+
+.contenido{
+    background-color: $background;
+    .seccionCrearDiagrama{
+        background-color: black;
+        height: 300px;
+        display: flex;
+        .seccionTexto{
+            width: 40vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+   
+            .titulo{
+                padding-bottom: 30px;
+            }
+            .descripcion{
+                padding-bottom: 30px;
+            }
+            .btnCrearDiagrama{
+                width: 200px;
+                height: 30px;
+                border-radius: 7%;
+                background-color: $background;
+                cursor: pointer;
+            }
+
+        }
+    }
+    .imgMuestra{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+
+

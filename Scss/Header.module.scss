@@ -1,0 +1,31 @@
+$background: antiquewhite;
+$width: 100%;
+$carton: #E6AA6F;
+
+
+.BTHeader{
+    display: flex;
+    justify-content: space-between;
+    background-color: $carton;
+    align-items: center;
+    width: $width;
+    padding: 30px 0;
+
+    .imgHeader{
+        margin-left:30px;
+        max-height: 90px;
+    }
+    
+    .listaRedirecciones{
+        list-style: none;
+        display: flex;
+        margin-inline: 20px;
+
+        .redireccion{
+            text-decoration: none !important;
+            margin-inline: 20px;
+            color:black;
+            
+        }
+    }
+}

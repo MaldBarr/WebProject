@@ -1,0 +1,34 @@
+.contenido {
+  background-color: rgb(249, 106, 106);
+}
+.contenido .seccionCrearDiagrama {
+  background-color: black;
+  height: 300px;
+  display: flex;
+}
+.contenido .seccionCrearDiagrama .seccionTexto {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contenido .seccionCrearDiagrama .seccionTexto .titulo {
+  padding-bottom: 30px;
+}
+.contenido .seccionCrearDiagrama .seccionTexto .descripcion {
+  padding-bottom: 30px;
+}
+.contenido .seccionCrearDiagrama .seccionTexto .btnCrearDiagrama {
+  width: 200px;
+  height: 30px;
+  border-radius: 7%;
+  background-color: rgb(249, 106, 106);
+  cursor: pointer;
+}
+.contenido .imgMuestra {
+  height: 100%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=Inicio.module.css.map */

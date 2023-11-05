@@ -25,11 +25,9 @@ ul{
 }
 
 img{
-    max-height: 90px;
 }
 
 div{
-    margin: 20px;
     background-color: $base;
 }
 
@@ -37,6 +35,5 @@ button{
     display: flexbox;
     border: none;
     justify-content: left;
-    padding: 50px;
     margin: 0;
 }

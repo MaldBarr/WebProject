@@ -1,4 +1,4 @@
-header {
+.BTHeader {
   display: flex;
   justify-content: space-between;
   background-color: #E6AA6F;
@@ -6,19 +6,19 @@ header {
   width: 100%;
   padding: 30px 0;
 }
-
-img {
+.BTHeader .imgHeader {
+  margin-left: 30px;
   max-height: 90px;
 }
-
-ul {
+.BTHeader .listaRedirecciones {
   list-style: none;
   display: flex;
   margin-inline: 20px;
 }
-
-li {
+.BTHeader .listaRedirecciones .redireccion {
+  text-decoration: none !important;
   margin-inline: 20px;
+  color: black;
 }
 
-/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=Header.module.css.map */
