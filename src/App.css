@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  /*max-width: 1280px;*//*si se saca esta linea BT se ajusta al ancho de la pantalla*/
   margin: 0 auto;
   /*padding: 2rem;*/
   text-align: center;

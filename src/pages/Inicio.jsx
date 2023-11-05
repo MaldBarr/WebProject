@@ -23,11 +23,14 @@ function Inicio() {
                 <img className={style.imgMuestra} src="./public/Logo.png" alt="Imagen de diagrama"></img>
               </section>
               
-              <section id="showDiagram">
-                <div className="texto">
-                  <span>Como hacer un diagrama</span> <br />
-                  <span>estructura de datos</span> <br />
-                  <span>descripcion</span> <br />
+              <section className={style.seccionInformacion}>
+                <img className={style.imgMuestra2} src="./public/Logo.png" alt="Imagen de diagrama"></img>
+                <div className={style.seccionTexto2}>
+                  <h2 className={style.tituloInformacion}>
+                    <span>Como hacer un diagrama</span> <br />
+                    <span>de estructura de datos</span> <br />
+                  </h2>
+                  <p className={style.descripcion}><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, voluptatum voluptates. Qui nihil quidem unde a nobis soluta autem sed nesciunt voluptatibus laboriosam. Reiciendis nostrum iure, maxime laudantium hic labore.</span> <br /></p>
                 </div>
               </section>
           </main>

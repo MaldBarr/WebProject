@@ -5,10 +5,13 @@
   align-items: center;
   width: 100%;
   padding: 30px 0;
+  position: fixed; /**/
+  max-height: 40px;
+  /*max-width: 1280px;*/
 }
 .BTHeader .imgHeader {
   margin-left: 30px;
-  max-height: 90px;
+  max-height: 80px;
 }
 .BTHeader .listaRedirecciones {
   list-style: none;

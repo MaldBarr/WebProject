@@ -1,4 +1,6 @@
-$background: rgb(249, 106, 106);
+@import 'Header.module';
+
+$btnColor: rgb(249, 106, 106);
 $width: 100%;
 $carton: #E6AA6F;
 
@@ -6,11 +8,14 @@ $carton: #E6AA6F;
 .contenido{
     background-color: $background;
     .seccionCrearDiagrama{
-        background-color: black;
-        height: 300px;
+        padding-top: 100px;
+        height: 500px;
+        width: 100%;
         display: flex;
         .seccionTexto{
-            width: 40vw;
+            background-color: $background;
+            width: 50vw;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -26,15 +31,40 @@ $carton: #E6AA6F;
                 width: 200px;
                 height: 30px;
                 border-radius: 7%;
-                background-color: $background;
+                background-color: $btnColor;
                 cursor: pointer;
             }
 
         }
+        .imgMuestra{
+            height: 100%;
+            width: 60vw;
+            padding: 20px;
+        }
     }
-    .imgMuestra{
-        height: 100%;
-        width: 100%;
+
+    .seccionInformacion{
+        display: flex;
+        height: 500px;
+        .imgMuestra2{
+            height: 100%;
+            width: 60vw;
+        }
+        .seccionTexto2{
+            background-color: $background;
+
+            width: 40vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .tituloInformacion{
+                padding-bottom: 30px;
+            }
+            .descripcion{
+                    padding-bottom: 30px;
+            }
+        }
     }
 }
 
