@@ -16,9 +16,9 @@ function Inicio() {
                       <span>de estructura de datos</span> <br />
                     </h1>
                     <p className={style.descripcion}>
-                      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore magni laborum veniam magnam cupiditate molestiae voluptatibus enim! Incidunt voluptatem tempora explicabo veritatis, et unde vitae beatae est commodi vel odio.</span> <br /> <br />
+                      <span>Binary Tree es una plataforma web innovadora diseñada para simplificar la creación y visualización de estructuras de datos a través de diagramas intuitivos. Con Binary Tree, puedes dar vida a tus ideas, procesos y sistemas mediante la representación gráfica de datos de manera rápida y sencilla.</span> <br /> <br />
                     </p>
-                    <Link to={'/Pizarra'}><button className={style.btnCrearDiagrama}>Crear diagrama</button></Link>
+                    <Link to={'/Pizarra'}><button className={style.btnCrearDiagrama}><b>Crear diagrama</b></button></Link>
                 </div>
                 <img className={style.imgMuestra} src="./public/Logo.png" alt="Imagen de diagrama"></img>
               </section>

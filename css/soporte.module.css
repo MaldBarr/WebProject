@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.soporte {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Agregar esta línea */
+  background-color: antiquewhite;
+}
+.soporte .listaPreguntasFrecuentes {
+  display: flex;
+  flex-direction: column; /* Agregar esta línea */
+}
+.soporte .btnEnviarReporte {
+  margin-top: 10px;
+  background-color: rgb(249, 106, 106);
+  border-radius: 5%;
+  width: 120px;
+  height: 25px;
+}
+
+/*# sourceMappingURL=soporte.module.css.map */

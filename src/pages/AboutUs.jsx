@@ -1,29 +1,16 @@
-import React from "react";
 import Header from './Header';
 import Footer from './Footer';
-import style from '/css/aboutUs.css';
+import styles from '/css/aboutUs.module.css';
 
 function AboutUs() {
     return (
       <>
       <Header/>
-      <div>
-          <meta charSet="utf-8" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <title>aboutUs</title>
-          <meta name="description" content =" Sobre nuestro equipo de Binary Three "/>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="stylesheet" href="css/styles.css" />
-          <link rel="stylesheet" href="css/aboutUsStyle.css" />
-          <main>
-            <div  className={style.div}>
-              <span>Somos tres estudiantes de la carrera: "ingenieria en ejecucion informatica", que actualmente</span><br />
-              <span>nos encontramos curzando el ramo de "ingenieria web", donde como proyecto a presentar, nacio:</span><br />
-              <span>BINARY TREE</span>
-            </div>
-          </main>
-        
-      </div>
+        <div className={styles.contenido}>
+          <span>Somos tres estudiantes de la carrera: ingenieria en ejecucion informatica, que actualmente</span><br />
+           <span>nos encontramos cursando el ramo de ingenieria web, donde como proyecto a presentar, nacio:</span><br />
+          <span>BINARY TREE</span>
+        </div>
       <Footer/>
       </>
     );

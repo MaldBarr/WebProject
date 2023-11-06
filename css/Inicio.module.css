@@ -26,10 +26,12 @@
 
 .contenido {
   background-color: antiquewhite;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 .contenido .seccionCrearDiagrama {
   padding-top: 100px;
-  height: 500px;
+  height: 400px;
   width: 100%;
   display: flex;
 }
@@ -56,13 +58,13 @@
   cursor: pointer;
 }
 .contenido .seccionCrearDiagrama .imgMuestra {
-  height: 100%;
+  height: 90%;
   width: 60vw;
   padding: 20px;
 }
 .contenido .seccionInformacion {
   display: flex;
-  height: 500px;
+  height: 400px;
 }
 .contenido .seccionInformacion .imgMuestra2 {
   height: 100%;

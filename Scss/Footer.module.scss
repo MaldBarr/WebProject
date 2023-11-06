@@ -5,13 +5,11 @@ $width : 100%;
     background-color: $carton;
     display: flex;
     width: $width;
-    height: 100px;
+    height: 10vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .textoFooter{
-        .soporte{
-
-        }
+    .soporte{
+        padding-top: 10px;
     }
 }

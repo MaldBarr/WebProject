@@ -1,0 +1,27 @@
+$background: antiquewhite;
+$carton: #E6AA6F;
+$base: white;
+$minwidth: 100%;
+$btnColor: rgb(249, 106, 106);
+
+.soporte {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Agregar esta línea */
+    background-color: $background;
+ 
+    .listaPreguntasFrecuentes{
+        display: flex;
+        flex-direction: column; /* Agregar esta línea */
+    }
+    .btnEnviarReporte {
+    margin-top: 10px;
+      background-color: $btnColor;
+      border-radius: 5%;
+      width: 120px;
+      height: 25px;
+    }
+}
+  
