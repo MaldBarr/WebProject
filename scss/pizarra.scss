@@ -4,11 +4,13 @@ $base: white;
 $red: #E62A44;
 $minwidth: 100%;
 
+/*Estos estilos afectan globalmente a los demas componentes*/
+/*
 *{
     margin: 0;
     padding: 0;
-}
-
+}*/
+/*
 #sidebar{
     position: fixed;
     width: 200px;
@@ -41,4 +43,4 @@ ul li{
     display: block;
     width: 40px;
     text-align: center;
-}
+}*/

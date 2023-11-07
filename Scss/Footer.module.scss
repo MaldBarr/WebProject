@@ -6,10 +6,13 @@ $width : 100%;
     display: flex;
     width: $width;
     height: 10vh;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    .soporte{
-        padding-top: 10px;
+    gap:10px;
+    a{
+        svg{
+            width: 20px;
+            height: 20px;
+        }
     }
 }

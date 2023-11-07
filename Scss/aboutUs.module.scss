@@ -2,12 +2,21 @@ $background: antiquewhite;
 
 .contenido {
     background-color: $background;
-    height: 100%;
     //width: $minwidth;
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    .texto{
+        width: 500px;
+        background-color: $background;
+        .titulo{
+            padding-bottom: 20px;
+            padding-top: 50px;
+
+        }
+    }
+
   }
   
 

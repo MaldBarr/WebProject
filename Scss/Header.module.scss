@@ -22,13 +22,23 @@ $carton: #E6AA6F;
     .listaRedirecciones{
         list-style: none;
         display: flex;
-        margin-inline: 20px;
-
-        .redireccion{
-            text-decoration: none !important;
-            margin-inline: 20px;
-            color:black;
-            
+        margin-right: 30px;
+        .redireccion1{
+            padding: 10px;
+            a{/*a == Link*/
+                text-decoration: none !important;
+                color:black;
+            }            
+        }
+        .redireccion2{
+            padding: 4px;
+            a{
+                svg{
+                    width: 45px;
+                    height: 45px;
+                }     
+            }    
         }
     }
 }
+
