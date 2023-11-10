@@ -1,48 +1,76 @@
 .BTHeader {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: #E6AA6F;
-  align-items: center;
   width: 100%;
   padding: 30px 0;
   position: fixed; /**/
-  max-height: 40px;
+  height: 30px;
   /*max-width: 1280px;*/
 }
-.BTHeader .imgHeader {
+.BTHeader a .logo {
   margin-left: 30px;
   max-height: 80px;
 }
-.BTHeader .listaRedirecciones {
+.BTHeader nav {
+  background-color: yelo;
+}
+.BTHeader nav .listaRedirecciones {
   list-style: none;
   display: flex;
   margin-right: 30px;
 }
-.BTHeader .listaRedirecciones .redireccion1 {
+.BTHeader nav .listaRedirecciones .redireccion1 {
   padding: 10px;
 }
-.BTHeader .listaRedirecciones .redireccion1 a { /*a == Link*/
+.BTHeader nav .listaRedirecciones .redireccion1 a { /*a == Link*/
   text-decoration: none !important;
   color: black;
 }
-.BTHeader .listaRedirecciones .redireccion2 {
+.BTHeader nav .listaRedirecciones .redireccion1 a:hover {
+  color: white;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 {
   padding: 4px;
 }
-.BTHeader .listaRedirecciones .redireccion2 a svg {
+.BTHeader nav .listaRedirecciones .redireccion2 a svg {
   width: 45px;
   height: 45px;
 }
+.BTHeader nav .listaRedirecciones .redireccion2 a svg:hover {
+  fill: white;
+  transition: fill 0.2s ease-in-out;
+}
 
+@media screen and (max-width: 300px) {
+  .BTHeader {
+    flex-direction: column;
+    height: auto;
+  }
+  .BTHeader a .logo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .BTHeader nav {
+    margin-top: 10px;
+  }
+}
+/*usar flex-wrap para las secciones de texto*/
 .contenido {
+  padding-top: 100px;
   background-color: antiquewhite;
   padding-left: 100px;
   padding-right: 100px;
+  flex-wrap: wrap;
+  /*esta seccion contiene a un texto y una imagen (texto a la izquierda e imagen a la derecha)*/
 }
 .contenido .seccionCrearDiagrama {
-  padding-top: 100px;
   height: 400px;
   width: 100%;
   display: flex;
+  /*seccion texto esta en la izquierda*/
+  /*la imagen esta a la derecha*/
 }
 .contenido .seccionCrearDiagrama .seccionTexto {
   background-color: antiquewhite;
@@ -54,17 +82,24 @@
   flex-direction: column;
 }
 .contenido .seccionCrearDiagrama .seccionTexto .titulo {
-  padding-bottom: 30px;
+  font-size: 40px;
 }
 .contenido .seccionCrearDiagrama .seccionTexto .descripcion {
   padding-bottom: 30px;
 }
 .contenido .seccionCrearDiagrama .seccionTexto .btnCrearDiagrama {
-  width: 200px;
-  height: 30px;
+  width: 300px;
+  height: 50px;
   border-radius: 7%;
   background-color: rgb(249, 106, 106);
   cursor: pointer;
+}
+.contenido .seccionCrearDiagrama .seccionTexto .btnCrearDiagrama b {
+  font-size: 20px;
+}
+.contenido .seccionCrearDiagrama .seccionTexto .btnCrearDiagrama b:hover {
+  color: white;
+  transition: font-size 0.2s ease-in-out;
 }
 .contenido .seccionCrearDiagrama .imgMuestra {
   height: 90%;
@@ -88,10 +123,35 @@
   flex-direction: column;
 }
 .contenido .seccionInformacion .seccionTexto2 .tituloInformacion {
-  padding-bottom: 30px;
+  font-size: 40px;
 }
 .contenido .seccionInformacion .seccionTexto2 .descripcion {
   padding-bottom: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .seccionCrearDiagrama {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .seccionCrearDiagrama .seccionTexto {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .seccionCrearDiagrama .imgMuestra {
+    width: 100%;
+  }
+  .seccionInformacion {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .seccionInformacion .imgMuestra2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .seccionInformacion .seccionTexto2 {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=Inicio.module.css.map */

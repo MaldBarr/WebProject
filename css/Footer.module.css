@@ -1,38 +1,61 @@
 .BTHeader {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: #E6AA6F;
-  align-items: center;
   width: 100%;
   padding: 30px 0;
   position: fixed; /**/
-  max-height: 40px;
+  height: 30px;
   /*max-width: 1280px;*/
 }
-.BTHeader .imgHeader {
+.BTHeader a .logo {
   margin-left: 30px;
   max-height: 80px;
 }
-.BTHeader .listaRedirecciones {
+.BTHeader nav {
+  background-color: yelo;
+}
+.BTHeader nav .listaRedirecciones {
   list-style: none;
   display: flex;
   margin-right: 30px;
 }
-.BTHeader .listaRedirecciones .redireccion1 {
+.BTHeader nav .listaRedirecciones .redireccion1 {
   padding: 10px;
 }
-.BTHeader .listaRedirecciones .redireccion1 a { /*a == Link*/
+.BTHeader nav .listaRedirecciones .redireccion1 a { /*a == Link*/
   text-decoration: none !important;
   color: black;
 }
-.BTHeader .listaRedirecciones .redireccion2 {
+.BTHeader nav .listaRedirecciones .redireccion1 a:hover {
+  color: white;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 {
   padding: 4px;
 }
-.BTHeader .listaRedirecciones .redireccion2 a svg {
+.BTHeader nav .listaRedirecciones .redireccion2 a svg {
   width: 45px;
   height: 45px;
 }
+.BTHeader nav .listaRedirecciones .redireccion2 a svg:hover {
+  fill: white;
+  transition: fill 0.2s ease-in-out;
+}
 
+@media screen and (max-width: 300px) {
+  .BTHeader {
+    flex-direction: column;
+    height: auto;
+  }
+  .BTHeader a .logo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .BTHeader nav {
+    margin-top: 10px;
+  }
+}
 .footerBT {
   background-color: #E6AA6F;
   display: flex;
@@ -45,6 +68,10 @@
 .footerBT a svg {
   width: 20px;
   height: 20px;
+}
+.footerBT a svg:hover {
+  fill: white;
+  transition: font-size 0.2s ease-in-out;
 }
 
 /*# sourceMappingURL=Footer.module.css.map */

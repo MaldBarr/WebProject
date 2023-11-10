@@ -5,6 +5,7 @@ $minwidth: 100%;
 $btnColor: rgb(249, 106, 106);
 
 .soporte {
+ 
     height: 90vh;
     display: flex;
     justify-content: center;
@@ -35,15 +36,11 @@ $btnColor: rgb(249, 106, 106);
   .pregunta {
     cursor: pointer;
     padding: 10px;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     border-radius: 5px;
     margin-bottom: 10px;
   }
   
- 
-  .respuesta {
-    display: none;
-  }
   .respuestaMostrar {
     display: block;
     background-color: blue;

@@ -1,44 +1,68 @@
 $background: antiquewhite;
-$width: 100%;
+$widthHeader: 100%;
 $carton: #E6AA6F;
-
+$alturaHeader:30px;
 
 .BTHeader{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     background-color: $carton;
-    align-items: center;
-    width: $width;
+    width: $widthHeader;
     padding: 30px 0;
     position: fixed;/**/
-    max-height: 40px;
+    height: $alturaHeader;
     /*max-width: 1280px;*/
-    
-    .imgHeader{
-        margin-left:30px;
-        max-height: 80px;
-    }
-    
-    .listaRedirecciones{
-        list-style: none;
-        display: flex;
-        margin-right: 30px;
-        .redireccion1{
-            padding: 10px;
-            a{/*a == Link*/
-                text-decoration: none !important;
-                color:black;
-            }            
+    a{
+        .logo{
+            margin-left:30px;
+            max-height: 80px;
         }
-        .redireccion2{
-            padding: 4px;
-            a{
-                svg{
-                    width: 45px;
-                    height: 45px;
-                }     
-            }    
+    }
+    nav{
+        background-color: yelo;
+        .listaRedirecciones{
+            list-style: none;
+            display: flex;
+            margin-right: 30px;
+            .redireccion1{
+                padding: 10px;
+                a{/*a == Link*/
+                    text-decoration: none !important;
+                    color:black;
+                    &:hover {
+                        color: white;
+                    }
+                }            
+            }
+            .redireccion2{
+                padding: 4px;
+                a{
+                    svg{
+                        &:hover {
+                            fill: white;
+                            transition: fill 0.2s ease-in-out;
+                        }
+                        width: 45px;
+                        height: 45px;
+                    }     
+                }    
+            }
         }
     }
 }
 
+@media screen and (max-width: 300px) {
+    .BTHeader {
+      flex-direction: column;
+      height: auto;
+    }
+    .BTHeader a .logo {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+    .BTHeader nav {
+      margin-top: 10px;
+    }
+  }
+  

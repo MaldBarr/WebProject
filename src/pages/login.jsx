@@ -1,4 +1,3 @@
-import React from "react";
 import {Link} from 'react-router-dom';
 import styles from '/css/login.css?inline';
 import $ from 'jquery';
@@ -46,7 +45,7 @@ function validarCorreoElectronico(correo) {
 function Login(){
     return (
         <>
-        <div className={styles.body}>
+        <div className={styles.login}>
             <section id="Login" className={styles.section}>
                 <form className={styles.form} noValidate>
                     <h2>Identificate</h2>

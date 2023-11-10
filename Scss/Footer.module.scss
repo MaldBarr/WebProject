@@ -11,6 +11,10 @@ $width : 100%;
     gap:10px;
     a{
         svg{
+            &:hover {
+                fill: white;
+                transition: font-size 0.2s ease-in-out;
+            }
             width: 20px;
             height: 20px;
         }

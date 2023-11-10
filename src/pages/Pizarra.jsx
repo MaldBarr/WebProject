@@ -1,4 +1,3 @@
-import React from "react";
 import Header from './Header';
 import Footer from './Footer';
 import style from '/css/Pizarra.css'
@@ -7,8 +6,6 @@ import {Link} from 'react-router-dom';
 function Pizarra(){
     return (
         <>
-        <Header/>
-        <div>
         <main>
             <div id="sidebar" className="active,{style.sidebar}" >
             <div className="toggle-btn">
@@ -19,8 +16,6 @@ function Pizarra(){
             </ul>
             </div>
         </main>
-        </div>
-        <Footer/>
         </>
     );
 };

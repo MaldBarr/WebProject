@@ -29,13 +29,9 @@
 .pregunta {
   cursor: pointer;
   padding: 10px;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   border-radius: 5px;
   margin-bottom: 10px;
-}
-
-.respuesta {
-  display: none;
 }
 
 .respuestaMostrar {

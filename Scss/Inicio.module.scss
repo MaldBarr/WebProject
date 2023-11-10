@@ -3,18 +3,21 @@
 $btnColor: rgb(249, 106, 106);
 $width: 100%;
 $carton: #E6AA6F;
-
+/*usar flex-wrap para las secciones de texto*/
 
 .contenido{
+    padding-top:100px;
     background-color: $background;
     padding-left:100px;
     padding-right:100px;
-
+    flex-wrap: wrap;
+    /*esta seccion contiene a un texto y una imagen (texto a la izquierda e imagen a la derecha)*/
     .seccionCrearDiagrama{
-        padding-top: 100px;
+    
         height: 400px;
         width: 100%;
         display: flex;
+        /*seccion texto esta en la izquierda*/
         .seccionTexto{
             background-color: $background;
             width: 50vw;
@@ -23,22 +26,29 @@ $carton: #E6AA6F;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-   
             .titulo{
-                padding-bottom: 30px;
+                font-size:40px;   
             }
             .descripcion{
                 padding-bottom: 30px;
             }
             .btnCrearDiagrama{
-                width: 200px;
-                height: 30px;
+                width: 300px;
+                height: 50px;
                 border-radius: 7%;
                 background-color: $btnColor;
                 cursor: pointer;
+                b{
+                    &:hover {
+                        color: white;
+                        transition: font-size 0.2s ease-in-out;
+                    }
+                    font-size:20px;   
+                }
             }
 
         }
+        /*la imagen esta a la derecha*/
         .imgMuestra{
             height: 90%;
             width: 60vw;
@@ -61,17 +71,42 @@ $carton: #E6AA6F;
             justify-content: center;
             flex-direction: column;
             .tituloInformacion{
-                padding-bottom: 30px;
+                font-size:40px;   
             }
             .descripcion{
                     padding-bottom: 30px;
             }
         }
     }
-
+    
       
 }
 
 
 
 
+@media screen and (max-width: 600px) {
+    .seccionCrearDiagrama {
+      flex-wrap: wrap;
+      height: auto;
+    }
+    .seccionCrearDiagrama .seccionTexto {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .seccionCrearDiagrama .imgMuestra {
+      width: 100%;
+    }
+    .seccionInformacion {
+        flex-wrap: wrap;
+        height: auto;
+      }
+      .seccionInformacion .imgMuestra2 {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .seccionInformacion .seccionTexto2 {
+        width: 100%;
+      }
+  }
+  
