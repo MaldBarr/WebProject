@@ -1,0 +1,76 @@
+@import 'Header.module';
+
+$minwidth: 50%;
+$altura: 100vh;
+$red: #E62A44;
+/*
+*{
+    margin: 0px !important;
+    padding: 0px !important;
+}*/
+/*
+body{
+    margin: 0;
+    padding: 0;
+    display: flex !important;
+    background-color: $red;
+}
+
+section{
+    min-width: $minwidth;
+    min-height: $altura;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+input{
+    font-size: larger;
+}
+form{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#check{
+    display: inline;
+    text-align: left !important;
+    align-items: left !important; 
+}
+
+button{
+    cursor: pointer;
+}*/
+
+.login{
+    height: 100vh;
+    display: flex;
+    .mainSection{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $background;
+        width: 50vw;
+        height: 100%;
+
+    }
+
+    .section2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $carton;
+        width: 50vw;
+        height: 100%;
+        .optionsToGo{
+            .links{
+                button{
+                    margin: 0 5px;
+                }
+            }
+        }
+    }   
+}
+

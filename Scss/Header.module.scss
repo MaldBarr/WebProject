@@ -31,7 +31,7 @@ $alturaHeader:30px;
                     text-decoration: none !important;
                     color:black;
                     &:hover {
-                        color: white;
+                        color: $background;
                     }
                 }            
             }
@@ -40,7 +40,7 @@ $alturaHeader:30px;
                 a{
                     svg{
                         &:hover {
-                            fill: white;
+                            fill: $background;
                             transition: fill 0.2s ease-in-out;
                         }
                         width: 45px;

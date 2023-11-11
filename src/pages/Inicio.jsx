@@ -34,6 +34,7 @@ function Inicio() {
               </section>
         </main>
         <Footer/>
+
         </>
       );
 }

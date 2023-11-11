@@ -8,9 +8,8 @@ $carton: #E6AA6F;
 .contenido{
     padding-top:100px;
     background-color: $background;
-    padding-left:100px;
-    padding-right:100px;
-    flex-wrap: wrap;
+    
+    width: 100%;
     /*esta seccion contiene a un texto y una imagen (texto a la izquierda e imagen a la derecha)*/
     .seccionCrearDiagrama{
     
@@ -19,9 +18,10 @@ $carton: #E6AA6F;
         display: flex;
         /*seccion texto esta en la izquierda*/
         .seccionTexto{
-            background-color: $background;
             width: 50vw;
             height: 100%;
+            margin-left:100px;
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -52,20 +52,24 @@ $carton: #E6AA6F;
         .imgMuestra{
             height: 90%;
             width: 60vw;
-            padding: 20px;
+            padding-left:20px;
+            margin-right:100px;
         }
     }
 
     .seccionInformacion{
         display: flex;
         height: 400px;
+        width: 100%;
+
         .imgMuestra2{
             height: 100%;
             width: 60vw;
+            margin-left:100px;
         }
         .seccionTexto2{
-            background-color: $background;
             width: 40vw;
+            margin-right:100px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -78,35 +82,69 @@ $carton: #E6AA6F;
             }
         }
     }
+
     
       
 }
 
 
-
-
-@media screen and (max-width: 600px) {
-    .seccionCrearDiagrama {
-      flex-wrap: wrap;
-      height: auto;
-    }
-    .seccionCrearDiagrama .seccionTexto {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    .seccionCrearDiagrama .imgMuestra {
-      width: 100%;
-    }
-    .seccionInformacion {
+@media screen and (max-width: 1058px) {
+    .contenido{
+        /*esta seccion contiene a un texto y una imagen (texto a la izquierda e imagen a la derecha)*/
+        display: flex;
         flex-wrap: wrap;
-        height: auto;
-      }
-      .seccionInformacion .imgMuestra2 {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      .seccionInformacion .seccionTexto2 {
-        width: 100%;
-      }
-  }
-  
+        .seccionCrearDiagrama{
+            margin-bottom: 200px;
+            /*quiero centrar las otras secciones al medio de la pantalla horizontalmente*/
+            align-items: center;
+            /*seccion texto esta en la izquierda*/
+            flex-direction: column;
+            .seccionTexto{
+                margin-left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin-bottom: 100px;
+
+                .titulo{
+                }
+                .descripcion{
+                }
+                .btnCrearDiagrama{
+                    cursor: pointer;
+                    b{
+                    }
+                }
+    
+            }
+            /*la imagen esta a la derecha*/
+            .imgMuestra{
+                
+                padding-left:0;
+                margin-right:0;
+            }
+        }
+        .seccionInformacion{
+            flex-direction: column;
+            align-items: center;
+    
+            .imgMuestra2{
+                padding-left:0px;
+                margin-left:0px;
+            }
+            .seccionTexto2{
+                margin-right: 0px;
+    
+                .tituloInformacion{
+                }
+                .descripcion{
+                }
+            }
+        }
+
+    }
+    
+
+
+}

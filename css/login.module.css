@@ -56,23 +56,68 @@
     margin-top: 10px;
   }
 }
-.footerBT {
-  background-color: #E6AA6F;
-  display: flex;
-  width: 100%;
-  height: 10vh;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  /**/
-}
-.footerBT a svg {
-  width: 20px;
-  height: 20px;
-}
-.footerBT a svg:hover {
-  fill: antiquewhite;
-  transition: font-size 0.2s ease-in-out;
+/*
+*{
+    margin: 0px !important;
+    padding: 0px !important;
+}*/
+/*
+body{
+    margin: 0;
+    padding: 0;
+    display: flex !important;
+    background-color: $red;
 }
 
-/*# sourceMappingURL=Footer.module.css.map */
+section{
+    min-width: $minwidth;
+    min-height: $altura;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+input{
+    font-size: larger;
+}
+form{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#check{
+    display: inline;
+    text-align: left !important;
+    align-items: left !important; 
+}
+
+button{
+    cursor: pointer;
+}*/
+.login {
+  height: 100vh;
+  display: flex;
+}
+.login .mainSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  width: 50vw;
+  height: 100%;
+}
+.login .section2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E6AA6F;
+  width: 50vw;
+  height: 100%;
+}
+.login .section2 .optionsToGo .links button {
+  margin: 0 5px;
+}
+
+/*# sourceMappingURL=login.module.css.map */

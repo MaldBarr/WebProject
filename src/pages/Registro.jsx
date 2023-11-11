@@ -1,26 +1,27 @@
-import React from "react";
 import {Link} from 'react-router-dom';
 import FetchRegiones from "../assets/fetchRegiones.jsx";
-import styles from '/css/login.css?inline';
+import styles from '/css/login.module.css';
 import $ from 'jquery';
 
 
 function Registro() {
     return (
         <>
-        <div className={styles.body}>
-            <section className={styles.section}>
-                <div>
-                    <h2>Registrarse</h2>
-                    <p>o</p> 
-                <div>
-                    <Link to={'/Login'}><button>Iniciar sesion</button></Link>
-                    <Link to={'/InicioPagina'}><button>Inicio</button></Link>
-                </div>
+        <div className={styles.login}>
+            <section className={styles.section2}>
+                <div className={styles.optionsToGo}>
+                    <div>
+                        <h2>Registrarse</h2>
+                        <p>o</p> 
+                    <div className={styles.links}>
+                        <Link to={'/Login'}><button>Iniciar sesion</button></Link>
+                        <Link to={'/InicioPagina'}><button>Inicio</button></Link>
+                    </div>
+                    </div>
                 </div>
             </section>
 
-            <section id="Login" className={styles.section}>
+            <section id="Login" className={styles.mainSection}>
                 <form id="Registro" noValidate="">
                     <h2>Registrate</h2>
                     <input
@@ -65,7 +66,7 @@ function Registro() {
                     </div>
                     <p id={8} />
             
-                <button type="submit" id="submit">Registrarse</button>
+                <button type="submit" id="submitRegister">Registrarse</button>
                 </form>
             </section>
         </div>
@@ -75,7 +76,7 @@ function Registro() {
 export default Registro;
 
 $(document).ready(function(){
-    $("#submit").click(function(){
+    $("#submitRegister").click(function(){
         event.preventDefault();
         var nombre = $("#Username").val();
         var rut = $("#rut").val();
@@ -84,6 +85,8 @@ $(document).ready(function(){
         var comuna = $("#comuna").val();
         var contra = $("#password").val();
         var contra2 = $("#password2").val();
+        console.log("se ejecuto registro")
+
 
 
         if (nombre == "") {
@@ -141,6 +144,7 @@ $(document).ready(function(){
 
 function validaDV(rut) {
     // Se separa el número del dígito verificador
+    if(rut === undefined) return false;
     const [numero, dv] = rut.toString().replace('-K', '-k').split('-');
 
     // Aquí se debe aplicar módulo 11. La función se extrajo de:

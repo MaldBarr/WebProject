@@ -22,10 +22,6 @@ ul li {
   margin-inline: 20px;
 }
 
-div {
-  background-color: white;
-}
-
 button {
   display: flexbox;
   border: none;
