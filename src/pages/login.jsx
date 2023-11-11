@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 import styles from '/css/login.module.css';
-import $, { event } from 'jquery';
+import $ from 'jquery';
 import { useNavigate } from 'react-router-dom';
     $(document).ready(function(){
         validateLogin();
@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 function validateLogin(){
     let validated = false;
-    /* VERSION ANTIGUA ESTABA EN     $(document).ready(function(){}
+    /* VERSION ANTIGUA ESTABA EN     $(document).ready(function(){
     $("#submitLogin").click(function(){
         event.preventDefault();
         var email = $("#email").val();
@@ -63,6 +63,7 @@ function validateLogin(){
         }
         if (validatePass && validateMail){
             //cargar Cuenta
+            console.log("log exitoso");
             validated = true;
         }
     return validated;
@@ -80,7 +81,7 @@ function Login(){
     const handleSubmit = (event) => {
         event.preventDefault();
         if(validateLogin()){
-            navigate("/inicioPagina");
+            navigate("/proyectos");
         }
     }
     return (

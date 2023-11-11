@@ -2,27 +2,16 @@ $background: antiquewhite;
 $carton: #E6AA6F;
 $base: white;
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: $background;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: $carton;
-    align-items: center;
-    width: 100%;
-    padding: 30px 0;
-}
+
+
+/*
 ul{
-    list-style: none;
     display: flex;
     margin-inline: 20px;
     li{
         margin-inline: 20px;
     }
-}
+}*/
 
 
 

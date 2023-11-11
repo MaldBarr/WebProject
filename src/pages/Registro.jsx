@@ -2,9 +2,17 @@ import {Link} from 'react-router-dom';
 import FetchRegiones from "../assets/fetchRegiones.jsx";
 import styles from '/css/login.module.css';
 import $ from 'jquery';
+import { useNavigate } from 'react-router-dom';
 
 
 function Registro() {
+    const navigate = useNavigate();
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if(validateRegister()){
+            navigate("/inicioPagina");
+        }
+    }
     return (
         <>
         <div className={styles.login}>
@@ -22,7 +30,7 @@ function Registro() {
             </section>
 
             <section id="Login" className={styles.mainSection}>
-                <form id="Registro" noValidate="">
+                <form id="Registro" onSubmit={handleSubmit}  noValidate="">
                     <h2>Registrate</h2>
                     <input
                         type="text"
@@ -75,6 +83,83 @@ function Registro() {
 };
 export default Registro;
 
+function validateRegister(){
+    var nombre = $("#Username").val();
+    var rut = $("#rut").val();
+    var email = $("#Email").val();
+    var region = $("#sel_region").val();
+    var comuna = $("#comuna").val();
+    var contra = $("#password").val();
+    var contra2 = $("#password2").val();
+    console.log("se ejecuto registro")
+    var numCosasVerificadas = 0 ;
+    if (nombre == "") {
+        $("#1").text("Ingresa un nombre");
+    } else {
+        numCosasVerificadas+=1;
+        $("#1").text("");
+    }
+
+    if (!validaDV(rut)) {
+        $("#2").text("Rut Invalido");
+    }
+    else {
+        $("#2").text("");
+        numCosasVerificadas+=1;
+
+    }
+
+    if (!validarCorreoElectronico(email)){
+        $("#3").text("Correo invalido");
+    }
+    else{
+        $("#3").text("");
+        numCosasVerificadas+=1;
+
+    }
+    if (region === null){
+        $("#4").text("Selecciona una region");
+    }
+    else{
+        $("#4").text("");
+        numCosasVerificadas+=1;
+
+    }
+
+    if (comuna == "") {
+        $("#5").text("Ingresa tu comuna");
+    } else {
+        $("#5").text("");
+        numCosasVerificadas+=1;
+
+    }
+
+    if (contra == "") {
+        $("#6").text("Ingresa una contraseña");
+    } else {
+        $("#6").text("");
+        numCosasVerificadas+=1;
+
+    }
+    if (contra2 == ""){
+        $("#7").text("No puede estar vacio");
+    } else if (contra != contra2) {
+        $("#7").text("No son la misma contraseña");
+    } else{
+        $("#7").text("");
+        numCosasVerificadas+=1;
+    }
+    if ($("#check").prop('checked')){
+        $("#8").text("");
+        numCosasVerificadas+=1;
+    } else{
+        $("#8").text("Debes aceptar los terminos");
+    }
+    if(numCosasVerificadas == 8) return true;
+    return false;
+
+}
+/*
 $(document).ready(function(){
     $("#submitRegister").click(function(){
         event.preventDefault();
@@ -139,12 +224,13 @@ $(document).ready(function(){
             $("#8").text("Debes aceptar los terminos");
         }
     })
-});
+});*/
 
 
 function validaDV(rut) {
     // Se separa el número del dígito verificador
     if(rut === undefined) return false;
+
     const [numero, dv] = rut.toString().replace('-K', '-k').split('-');
 
     // Aquí se debe aplicar módulo 11. La función se extrajo de:

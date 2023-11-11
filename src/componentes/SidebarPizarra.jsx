@@ -1,4 +1,4 @@
-function sidebarPizarra() {
+function SidebarPizarra() {
     return (
         <>
             <div className="pizarraManipular">
@@ -7,4 +7,4 @@ function sidebarPizarra() {
         </>
     );
 }
-export default sidebarPizarra;
+export default SidebarPizarra;

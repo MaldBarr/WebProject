@@ -4,9 +4,10 @@
   justify-content: space-between;
   background-color: #E6AA6F;
   width: 100%;
-  padding: 30px 0;
+  /*padding: 30px 0;*/
   position: fixed; /**/
-  height: 30px;
+  height: 10vh;
+  z-index: 100;
   /*max-width: 1280px;*/
 }
 .BTHeader a .logo {
@@ -14,12 +15,12 @@
   max-height: 80px;
 }
 .BTHeader nav {
-  background-color: yelo;
+  margin-right: 80px;
 }
 .BTHeader nav .listaRedirecciones {
   list-style: none;
   display: flex;
-  margin-right: 30px;
+  gap: 20px;
 }
 .BTHeader nav .listaRedirecciones .redireccion1 {
   padding: 10px;

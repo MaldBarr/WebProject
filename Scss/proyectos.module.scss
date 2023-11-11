@@ -1,0 +1,17 @@
+@import 'paletaColores';
+@import 'sidebarProyectos.module';
+@import 'header.module';
+
+$minwidth: 100%;
+
+.proyectos{
+    padding-top:$heightHeader;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    .seccionProyectos{
+        background-color: blue;
+        width: 100%;
+        margin-left:$anchoSidebar ;
+    }
+}

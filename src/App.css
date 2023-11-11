@@ -4,8 +4,20 @@
   /*padding: 2rem;*/
   text-align: center;
 }
+body{
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
+}
 button{
   cursor: pointer;
+}
+ul{
+  list-style: none;
+  /*arreglar ul*/
+
+  padding-inline-start: 0;
+
 }
 .logo {
   height: 6em;

@@ -1,30 +1,22 @@
-import React from "react";
-import Footer from './Footer';
 import Header from './Header';
+import SidebarProyectos from "../componentes/SidebarProyectos";
+import styles from '/css/Proyectos.module.css';
 
 function Proyectos() {
     return (<>
     <Header/>
-    <div>
-    <main>
-        <div id="sidebar" className="active">
-        <div className="toggle-btn">
-            <span>☰</span>
-        </div>
-        <ul>
-            <li>Modo oscuro</li>
-            <li>
-            <a href="cuenta.html">Configuracion cuenta</a>
-            </li>
-            <li>
-            <a href="aboutUs.html">Sobre nosotros</a>
-            </li>
-        </ul>
-        </div>
-    </main>
-    <Footer/>
-    </div>
+    <section className={styles.proyectos}>
+        <SidebarProyectos/>
+        <section className={styles.seccionProyectos}>
+            <div className={styles.seccionCrearProyecto}>
+                <b> Crear Proyecto </b>
+            </div>
+            <div className={styles.seccionMisProyectos}>
+                <b> Abrir Proyecto </b>
+            </div>
+        </section>
+    </section>
     </>
     );
-};
+}
 export default Proyectos
