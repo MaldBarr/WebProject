@@ -1,6 +1,6 @@
-$background: antiquewhite;
+@import 'paletaColores';
+
 $widthHeader: 100%;
-$carton: #E6AA6F;
 $heightHeader:10vh;
 
 .BTHeader{
@@ -13,6 +13,7 @@ $heightHeader:10vh;
     position: fixed;/**/
     height: $heightHeader;
     z-index: 100;
+    border: 1px solid grey;
     /*max-width: 1280px;*/
     a{
         .logo{
@@ -32,7 +33,9 @@ $heightHeader:10vh;
                     text-decoration: none !important;
                     color:black;
                     &:hover {
-                        color: $background;
+                        color: white;
+                        font-weight: bold;
+                        
                     }
                 }            
             }

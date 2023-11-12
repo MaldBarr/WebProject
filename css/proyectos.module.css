@@ -1,12 +1,13 @@
 .sidebar {
   z-index: 99;
-  position: absolute;
+  position: fixed;
   width: 16vw;
   height: 100%;
-  background-color: #E62A44;
+  background-color: #f5d5ab;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid grey;
 }
 .sidebar nav {
   margin-bottom: 10px;
@@ -17,24 +18,28 @@
   flex-direction: column;
   gap: 20px;
 }
+.sidebar nav .listaLinks li:hover {
+  background-color: #b7976d;
+}
 .sidebar nav .listaLinks li a {
   color: black;
   text-decoration: none;
 }
 .sidebar nav .listaLinks li a:hover {
-  color: antiquewhite;
+  color: white;
 }
 
 .BTHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #E6AA6F;
+  background-color: #f6bc81;
   width: 100%;
   /*padding: 30px 0;*/
   position: fixed; /**/
   height: 10vh;
   z-index: 100;
+  border: 1px solid grey;
   /*max-width: 1280px;*/
 }
 .BTHeader a .logo {
@@ -57,7 +62,8 @@
   color: black;
 }
 .BTHeader nav .listaRedirecciones .redireccion1 a:hover {
-  color: antiquewhite;
+  color: white;
+  font-weight: bold;
 }
 .BTHeader nav .listaRedirecciones .redireccion2 {
   padding: 4px;
@@ -86,14 +92,28 @@
 }
 .proyectos {
   padding-top: 10vh;
-  display: flex;
+  padding-bottom: 30px;
   height: 100%;
   width: 100%;
 }
-.proyectos .seccionProyectos {
-  background-color: blue;
-  width: 100%;
+.proyectos .containerProyectos {
   margin-left: 16vw;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.proyectos .containerProyectos h3 {
+  padding: 30px;
+}
+.proyectos .containerProyectos .seccionCrearProyecto {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.proyectos .containerProyectos .seccionMisProyectos {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-row-gap: 20px;
 }
 
 /*# sourceMappingURL=proyectos.module.css.map */

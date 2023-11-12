@@ -54,6 +54,16 @@ button{
         background-color: $background;
         width: 50vw;
         height: 100%;
+        form{
+            button{
+                background-color: white;
+                border:1px solid grey;
+                border-radius: 5px;
+                color:black;
+                height: 22px;
+                width: 168px;
+            }
+        }
 
     }
 

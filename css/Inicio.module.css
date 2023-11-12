@@ -2,12 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #E6AA6F;
+  background-color: #f6bc81;
   width: 100%;
   /*padding: 30px 0;*/
   position: fixed; /**/
   height: 10vh;
   z-index: 100;
+  border: 1px solid grey;
   /*max-width: 1280px;*/
 }
 .BTHeader a .logo {
@@ -30,7 +31,8 @@
   color: black;
 }
 .BTHeader nav .listaRedirecciones .redireccion1 a:hover {
-  color: antiquewhite;
+  color: white;
+  font-weight: bold;
 }
 .BTHeader nav .listaRedirecciones .redireccion2 {
   padding: 4px;
@@ -89,16 +91,19 @@
 .contenido .seccionCrearDiagrama .seccionTexto .btnCrearDiagrama {
   width: 300px;
   height: 50px;
-  border-radius: 7%;
+  border-radius: 5px;
   background-color: rgb(249, 106, 106);
+  color: white;
   cursor: pointer;
 }
 .contenido .seccionCrearDiagrama .seccionTexto .btnCrearDiagrama b {
   font-size: 20px;
 }
-.contenido .seccionCrearDiagrama .seccionTexto .btnCrearDiagrama b:hover {
-  color: white;
+.contenido .seccionCrearDiagrama .seccionTexto .btnCrearDiagrama:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 151, 151);
   transition: font-size 0.2s ease-in-out;
+  border: 1px solid black;
 }
 .contenido .seccionCrearDiagrama .imgMuestra {
   height: 90%;

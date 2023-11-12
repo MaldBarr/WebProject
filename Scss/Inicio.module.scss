@@ -1,8 +1,9 @@
 @import 'Header.module';
 
 $btnColor: rgb(249, 106, 106);
+$btnColorHover: rgb(255, 151, 151);
+
 $width: 100%;
-$carton: #E6AA6F;
 /*usar flex-wrap para las secciones de texto*/
 
 .contenido{
@@ -35,15 +36,18 @@ $carton: #E6AA6F;
             .btnCrearDiagrama{
                 width: 300px;
                 height: 50px;
-                border-radius: 7%;
+                border-radius: 5px;
                 background-color: $btnColor;
+                color:white;
                 cursor: pointer;
                 b{
-                    &:hover {
-                        color: white;
-                        transition: font-size 0.2s ease-in-out;
-                    }
                     font-size:20px;   
+                }
+                &:hover {
+                    color: rgb(0, 0, 0);
+                    background-color: $btnColorHover;                    ;
+                    transition: font-size 0.2s ease-in-out;
+                    border: 1px solid black;
                 }
             }
 

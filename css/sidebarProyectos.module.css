@@ -1,12 +1,13 @@
 .sidebar {
   z-index: 99;
-  position: absolute;
+  position: fixed;
   width: 16vw;
   height: 100%;
-  background-color: #E62A44;
+  background-color: #f5d5ab;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid grey;
 }
 .sidebar nav {
   margin-bottom: 10px;
@@ -17,12 +18,15 @@
   flex-direction: column;
   gap: 20px;
 }
+.sidebar nav .listaLinks li:hover {
+  background-color: #b7976d;
+}
 .sidebar nav .listaLinks li a {
   color: black;
   text-decoration: none;
 }
 .sidebar nav .listaLinks li a:hover {
-  color: antiquewhite;
+  color: white;
 }
 
 /*# sourceMappingURL=sidebarProyectos.module.css.map */

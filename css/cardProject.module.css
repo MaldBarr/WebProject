@@ -1,0 +1,23 @@
+.cardProject {
+  height: 260px;
+  width: 260px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /*quiero que haya una linea negra para el borde de la card*/
+  border: 1px solid grey;
+  border-radius: 20px;
+  background-color: white;
+}
+.cardProject:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+.cardProject .preview {
+  height: 85%;
+  width: 90%;
+}
+
+/*# sourceMappingURL=cardProject.module.css.map */

@@ -12,6 +12,11 @@ body{
 button{
   cursor: pointer;
 }
+h5,h3,h4{
+  margin-block-start: 0;
+  margin-block-end:0;
+  margin-inline-start:0;
+}
 ul{
   list-style: none;
   /*arreglar ul*/

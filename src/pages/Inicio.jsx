@@ -17,7 +17,7 @@ function Inicio() {
                     <p className={style.descripcion}>
                       <span>Binary Tree es una plataforma web innovadora diseñada para simplificar la creación y visualización de estructuras de datos a través de diagramas intuitivos. Con Binary Tree, puedes dar vida a tus ideas, procesos y sistemas mediante la representación gráfica de datos de manera rápida y sencilla.</span> <br /> <br />
                     </p>
-                    <Link to={'/Pizarra'}><button className={style.btnCrearDiagrama}><b>Crear diagrama</b></button></Link>
+                    <Link to={'/login'}><button className={style.btnCrearDiagrama}><b>Crear diagrama</b></button></Link>
                 </article>
                 <img className={style.imgMuestra} src="./public/Logo.png" alt="Imagen de diagrama"></img>
               </section>
