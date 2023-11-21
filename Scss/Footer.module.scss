@@ -1,6 +1,7 @@
 @import 'Header.module';
 
 $width : 100%;
+
 .footerBT{
     background-color: $carton;
     display: flex;
@@ -10,6 +11,7 @@ $width : 100%;
     justify-content: center;
     gap:10px;
     /**/
+
  
     a{
         svg{

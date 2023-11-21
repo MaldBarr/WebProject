@@ -1,0 +1,60 @@
+@import 'Header.module';
+$anchoSidebar : 200px;
+#sidebarProyectos{
+    position: fixed;
+    width: $anchoSidebar;
+    height: 100%;
+    background-color:$background;
+    background-color: $background;
+    filter: brightness(0.90);
+
+    left: -200px;
+    transition: all 500ms linear;
+    margin-top:$heightHeader;
+    border: $border;
+}
+#sidebarProyectos.active{
+    left: 0;
+    height: 100%;
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 90%;
+        .listaRedirecciones {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            a{
+                &:hover, &:active {
+                    color: black; // Color del texto cuando se pasa el cursor por encima
+                }        
+                li {
+                    margin-bottom: 10px; // Ajusta este valor según tus necesidades
+                    &:hover {
+                        background-color: white; // Color del texto cuando se pasa el cursor por encima
+                        color:black
+                    }       
+                }
+            }
+           
+        }
+    }
+}
+
+
+#sidebarProyectos .toggle-btn{
+    position: absolute;
+    left: 230px;
+    top: 20px;
+    cursor: pointer;
+    height: 100%;
+}
+#sidebarProyectos .toggle-btn span{
+    display: block;
+    width: 40px;
+    text-align: center;
+    height: 100%;
+
+
+}

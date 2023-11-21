@@ -5,6 +5,9 @@ npm install react-router-dom@6
 npm install -g sass
 npm install jquery --save
 npm i --save-dev @types/jquery
+npm install prop-types
+npm install react-icons --save
+
 
 Ejecutar este comando cada que se entra al proyecto para que este actualizado:
 sass --watch ./scss:./css

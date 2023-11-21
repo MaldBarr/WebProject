@@ -2,7 +2,7 @@
 
 $widthHeader: 100%;
 $heightHeader:10vh;
-
+$border:  1px solid grey;
 .BTHeader{
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@ $heightHeader:10vh;
     position: fixed;/**/
     height: $heightHeader;
     z-index: 100;
-    border: 1px solid grey;
+    border: $border;
     /*max-width: 1280px;*/
     a{
         .logo{

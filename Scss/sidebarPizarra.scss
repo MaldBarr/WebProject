@@ -1,18 +1,21 @@
-/*
+@import 'Header.module';
+
 #sidebar{
     position: fixed;
     width: 200px;
-    height: 80%;
-    background-color: $red;
+    height: 100%;
+    background-color: red;
     left: -200px;
     transition: all 500ms linear;
-}
+    margin-top:$heightHeader;
+    border: $border;
 
+}
 #sidebar.active{
     left: 0;
 }
 
-ul li{
+.listaEstructurasDatos .Estructura{
     text-align: center;
     position: relative;
     margin-bottom: 10px;
@@ -25,7 +28,6 @@ ul li{
     position: absolute;
     left: 230px;
     top: 20px;
-    background-color: red;
     cursor: pointer;
 }
 #sidebar .toggle-btn span{
@@ -33,7 +35,3 @@ ul li{
     width: 40px;
     text-align: center;
 }
-
-*/
-
-/*# sourceMappingURL=pizarra.css.map */

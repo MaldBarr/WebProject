@@ -1,4 +1,8 @@
-.cardProject {
+/*
+            <Link to={'/InicioPagina'}><img className={styles.logo} src="public/Logo.png" alt="Logo Binary Tree"/></Link>
+
+*/
+.redireccionCard {
   height: 260px;
   width: 260px;
   display: flex;
@@ -7,17 +11,26 @@
   align-items: center;
   gap: 10px;
   /*quiero que haya una linea negra para el borde de la card*/
-  border: 1px solid grey;
+  border: 1px solid #808080;
   border-radius: 20px;
   background-color: white;
+  color: black;
 }
-.cardProject:hover {
+.redireccionCard:hover {
   transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
-.cardProject .preview {
+.redireccionCard .preview {
   height: 85%;
   width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redireccionCard .preview img {
+  height: 70%;
+  width: 70%;
 }
 
 /*# sourceMappingURL=cardProject.module.css.map */

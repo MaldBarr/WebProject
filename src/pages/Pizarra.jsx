@@ -1,22 +1,16 @@
-import Header from './Header';
-import Footer from './Footer';
-import style from '/css/Pizarra.css'
-import {Link} from 'react-router-dom';
+import style from '/css/Pizarra.css';
+import HeaderPizarra from '../componentes/HeaderPizarra';
+import SidebarPizarra from '../componentes/SidebarPizarra';
+import PizarraManipular from '../componentes/PizarraManipular';
 
-function Pizarra(){
+function Pizarra() {
     return (
         <>
-        <main>
-            <div id="sidebar" className="active,{style.sidebar}" >
-            <div className="toggle-btn">
-                <span>☰</span>
-            </div>
-            <ul className={style.ul}>
-                <li className={style.li} >insertar logos de modelos</li>
-            </ul>
-            </div>
-        </main>
+        <HeaderPizarra/>
+        <SidebarPizarra/>
+        <PizarraManipular/>
         </>
     );
 };
+
 export default Pizarra;

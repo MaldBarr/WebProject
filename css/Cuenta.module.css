@@ -1,11 +1,68 @@
-/*
-ul{
-    display: flex;
-    margin-inline: 20px;
-    li{
-        margin-inline: 20px;
-    }
-}*/
+.BTHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6bc81;
+  width: 100%;
+  /*padding: 30px 0;*/
+  position: fixed; /**/
+  height: 10vh;
+  z-index: 100;
+  border: 1px solid grey;
+  /*max-width: 1280px;*/
+}
+.BTHeader a .logo {
+  margin-left: 30px;
+  max-height: 80px;
+}
+.BTHeader nav {
+  margin-right: 80px;
+}
+.BTHeader nav .listaRedirecciones {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 {
+  padding: 10px;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 a { /*a == Link*/
+  text-decoration: none !important;
+  color: black;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 a:hover {
+  color: white;
+  font-weight: bold;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 {
+  padding: 4px;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 a svg {
+  width: 45px;
+  height: 45px;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 a svg:hover {
+  fill: antiquewhite;
+  transition: fill 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 300px) {
+  .BTHeader {
+    flex-direction: column;
+    height: auto;
+  }
+  .BTHeader a .logo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .BTHeader nav {
+    margin-top: 10px;
+  }
+}
+.configuracionCuenta {
+  background-color: red;
+  padding-top: 10vh;
+}
 button {
   display: flexbox;
   border: none;

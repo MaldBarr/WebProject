@@ -63,7 +63,9 @@
   position: fixed;
   width: 200px;
   height: 100%;
-  background-color: red;
+  background-color: antiquewhite;
+  background-color: antiquewhite;
+  filter: brightness(0.9);
   left: -200px;
   transition: all 500ms linear;
   margin-top: 10vh;
@@ -72,15 +74,28 @@
 
 #sidebarProyectos.active {
   left: 0;
+  height: 100%;
 }
-
-.listaEstructurasDatos .Estructura {
-  text-align: center;
-  position: relative;
-  margin-bottom: 10px;
-  border-bottom: 1px;
-  padding: 15px 15px;
+#sidebarProyectos.active .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 90%;
+}
+#sidebarProyectos.active .links .listaRedirecciones {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#sidebarProyectos.active .links .listaRedirecciones a:hover, #sidebarProyectos.active .links .listaRedirecciones a:active {
+  color: black;
+}
+#sidebarProyectos.active .links .listaRedirecciones a li {
+  margin-bottom: 10px;
+}
+#sidebarProyectos.active .links .listaRedirecciones a li:hover {
+  background-color: white;
+  color: black;
 }
 
 #sidebarProyectos .toggle-btn {
@@ -88,12 +103,14 @@
   left: 230px;
   top: 20px;
   cursor: pointer;
+  height: 100%;
 }
 
 #sidebarProyectos .toggle-btn span {
   display: block;
   width: 40px;
   text-align: center;
+  height: 100%;
 }
 
-/*# sourceMappingURL=sidebarProyectos.module.css.map */
+/*# sourceMappingURL=sidebarProyectos.css.map */

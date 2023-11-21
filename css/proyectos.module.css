@@ -1,32 +1,99 @@
-.sidebar {
-  z-index: 99;
-  position: fixed;
-  width: 16vw;
-  height: 100%;
-  background-color: #f5d5ab;
+.BTHeader {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
+  background-color: #f6bc81;
+  width: 100%;
+  /*padding: 30px 0;*/
+  position: fixed; /**/
+  height: 10vh;
+  z-index: 100;
   border: 1px solid grey;
+  /*max-width: 1280px;*/
 }
-.sidebar nav {
-  margin-bottom: 10px;
-  margin-top: auto;
+.BTHeader a .logo {
+  margin-left: 30px;
+  max-height: 80px;
 }
-.sidebar nav .listaLinks {
+.BTHeader nav {
+  margin-right: 80px;
+}
+.BTHeader nav .listaRedirecciones {
+  list-style: none;
   display: flex;
-  flex-direction: column;
   gap: 20px;
 }
-.sidebar nav .listaLinks li:hover {
-  background-color: #b7976d;
+.BTHeader nav .listaRedirecciones .redireccion1 {
+  padding: 10px;
 }
-.sidebar nav .listaLinks li a {
+.BTHeader nav .listaRedirecciones .redireccion1 a { /*a == Link*/
+  text-decoration: none !important;
   color: black;
-  text-decoration: none;
 }
-.sidebar nav .listaLinks li a:hover {
+.BTHeader nav .listaRedirecciones .redireccion1 a:hover {
   color: white;
+  font-weight: bold;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 {
+  padding: 4px;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 a svg {
+  width: 45px;
+  height: 45px;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 a svg:hover {
+  fill: antiquewhite;
+  transition: fill 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 300px) {
+  .BTHeader {
+    flex-direction: column;
+    height: auto;
+  }
+  .BTHeader a .logo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .BTHeader nav {
+    margin-top: 10px;
+  }
+}
+#sidebarProyectos {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: red;
+  left: -200px;
+  transition: all 500ms linear;
+  margin-top: 10vh;
+  border: 1px solid grey;
+}
+
+#sidebarProyectos.active {
+  left: 0;
+}
+
+.listaEstructurasDatos .Estructura {
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+  border-bottom: 1px;
+  padding: 15px 15px;
+  list-style: none;
+}
+
+#sidebarProyectos .toggle-btn {
+  position: absolute;
+  left: 230px;
+  top: 20px;
+  cursor: pointer;
+}
+
+#sidebarProyectos .toggle-btn span {
+  display: block;
+  width: 40px;
+  text-align: center;
 }
 
 .BTHeader {
@@ -97,7 +164,7 @@
   width: 100%;
 }
 .proyectos .containerProyectos {
-  margin-left: 16vw;
+  margin-left: 200px;
   padding-left: 30px;
   padding-right: 30px;
 }

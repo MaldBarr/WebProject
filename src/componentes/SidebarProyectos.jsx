@@ -1,25 +1,36 @@
 import {Link} from 'react-router-dom';
-import styles from '/css/SidebarProyectos.module.css'
+import styles from '/css/SidebarProyectos.css'
+import { FiAlignJustify } from "react-icons/fi";
+import { useState } from 'react';
 
 function SidebarProyectos() {
+    const [isActive, setIsActive] = useState(true);
+    const toggleSidebar = () => {
+        setIsActive(!isActive);
+    };
+
     return (
         <>
-            <aside className={styles.sidebar}>
-                <nav className={styles.links}>
-                    <ul className={styles.listaLinks}>
+        <div  id ="sidebarProyectos" className={isActive ? "active" : ""} >
+
+            <nav className="links">
+                <ul className="listaRedirecciones">
+                    <Link to={"/cuenta"}>
                         <li> 
-                            <Link to={"/aboutus"}>
-                            <b>Configuracion cuenta </b>
-                            </Link>
+                            <b>Mi cuenta </b>
                         </li>
-                        <li>
-                            <Link to={"/aboutus"}>
-                            <b>Sobre nosotros</b>
-                            </Link> 
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
+                    </Link>
+                    <Link to={"/soporte"}>
+                            <li>
+                                <b>Soporte</b>
+                            </li>
+                    </Link> 
+                </ul>
+            </nav>
+            <div className="toggle-btn" onClick={toggleSidebar}>
+                <span> <FiAlignJustify size='20px'/> </span>
+            </div>
+        </div>
         </>
     );
 }

@@ -1,20 +1,18 @@
+@import 'Header.module';
 $background: antiquewhite;
 $carton: #E6AA6F;
 $base: white;
 
+.configuracionCuenta{
+    background-color: red;
+    padding-top: $heightHeader;
+    .userName{
 
-
-/*
-ul{
-    display: flex;
-    margin-inline: 20px;
-    li{
-        margin-inline: 20px;
     }
-}*/
+    nav{
 
-
-
+    }
+}
 button{
     display: flexbox;
     border: none;
