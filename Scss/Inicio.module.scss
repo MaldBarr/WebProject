@@ -14,7 +14,6 @@ $width: 100%;
     /*esta seccion contiene a un texto y una imagen (texto a la izquierda e imagen a la derecha)*/
     .seccionCrearDiagrama{
     
-        height: 400px;
         width: 100%;
         display: flex;
         /*seccion texto esta en la izquierda*/
@@ -63,7 +62,6 @@ $width: 100%;
 
     .seccionInformacion{
         display: flex;
-        height: 400px;
         width: 100%;
 
         .imgMuestra2{
@@ -98,7 +96,6 @@ $width: 100%;
         display: flex;
         flex-wrap: wrap;
         .seccionCrearDiagrama{
-            background-color: red;
             margin-bottom: 200px;
             /*quiero centrar las otras secciones al medio de la pantalla horizontalmente*/
             align-items: center;

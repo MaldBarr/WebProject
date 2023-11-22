@@ -67,7 +67,6 @@
   /*esta seccion contiene a un texto y una imagen (texto a la izquierda e imagen a la derecha)*/
 }
 .contenido .seccionCrearDiagrama {
-  height: 400px;
   width: 100%;
   display: flex;
   /*seccion texto esta en la izquierda*/
@@ -113,7 +112,6 @@
 }
 .contenido .seccionInformacion {
   display: flex;
-  height: 400px;
   width: 100%;
 }
 .contenido .seccionInformacion .imgMuestra2 {
@@ -143,7 +141,6 @@
     flex-wrap: wrap;
   }
   .contenido .seccionCrearDiagrama {
-    background-color: red;
     margin-bottom: 200px;
     /*quiero centrar las otras secciones al medio de la pantalla horizontalmente*/
     align-items: center;
