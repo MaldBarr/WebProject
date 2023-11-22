@@ -143,6 +143,7 @@
     flex-wrap: wrap;
   }
   .contenido .seccionCrearDiagrama {
+    background-color: red;
     margin-bottom: 200px;
     /*quiero centrar las otras secciones al medio de la pantalla horizontalmente*/
     align-items: center;

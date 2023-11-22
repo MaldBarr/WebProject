@@ -1,9 +1,17 @@
+@import 'Header.module';
+@import 'SidebarPizarra';
 $background: antiquewhite;
 $carton: #E6AA6F;
 $base: white;
 $red: #E62A44;
 $minwidth: 100%;
 
+.pizarraManipular{
+    background-color: white;
+    padding-top: $heightHeader;
+    padding-left: $widthSidebarPizarra;
+    height: 90vh;
+}
 
 /*
 #sidebar{

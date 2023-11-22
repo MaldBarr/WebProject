@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import style from '/css/sidebarPizarra.css';
 
 function SidebarPizarra() {
     const [isActive, setIsActive] = useState(true);
@@ -11,8 +10,16 @@ function SidebarPizarra() {
             <div className="toggle-btn" onClick={toggleSidebar}>
                 <span>☰</span>
             </div>
-            <ul className={style.listaEstructurasDatos}>
-                <li className={style.Estructura} >insertar logos de modelos</li>
+            <ul className="listaEstructurasDatos">
+                <li className="Estructura" >
+                    <img className="imgEstructura" src="public/Logo.png" alt="Logo Binary Tree"/>
+                </li>
+                <li className="Estructura" >
+                    <img className="imgEstructura" src="public/Logo.png" alt="Logo Binary Tree"/>
+                </li>
+                <li className="Estructura" >
+                    <img className="imgEstructura" src="public/Logo.png" alt="Logo Binary Tree"/>
+                </li>
             </ul>
         </div>
     );
