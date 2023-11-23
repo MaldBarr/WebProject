@@ -1,0 +1,36 @@
+@import 'Header.module';
+$widthSidebarPizarra : 220px;
+#sidebarPizarra{
+    position: fixed;
+    width: $widthSidebarPizarra;
+    height: 100%;
+    background-color: white;
+    left: -$widthSidebarPizarra;
+    transition: all 500ms linear;
+    margin-top:$heightHeader;
+    border: $border;
+    h3{
+        padding:15px 0;
+        text-align: left;
+        padding-left:20px;
+        &:hover{
+            background-color: $background;
+            cursor: pointer;
+        }
+    }
+}
+#sidebarPizarra.active{
+    left: 0;
+}
+
+#sidebarPizarra .toggleBtn{
+    position: absolute;
+    left: 230px;
+    top: 20px;
+    cursor: pointer;
+}
+#sidebarPizarra .toggleBtn span{
+    display: block;
+    width: 40px;
+    text-align: center;
+}

@@ -4,7 +4,7 @@ import { FiAlignJustify } from "react-icons/fi";
 import { useState } from 'react';
 
 function SidebarProyectos() {
-    const [isActive, setIsActive] = useState(true);
+    const [isActive, setIsActive] = useState(false);
     const toggleSidebar = () => {
         setIsActive(!isActive);
     };
@@ -12,7 +12,6 @@ function SidebarProyectos() {
     return (
         <>
         <div  id ="sidebarProyectos" className={isActive ? "active" : ""} >
-
             <nav className="links">
                 <ul className="listaRedirecciones">
                     <Link to={"/cuenta"}>

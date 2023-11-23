@@ -1,0 +1,21 @@
+.listaEstructurasDatos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 100%;
+}
+.listaEstructurasDatos .Estructura {
+  width: 100%;
+  height: 60px;
+}
+.listaEstructurasDatos .Estructura:hover {
+  background-color: whitesmoke;
+}
+.listaEstructurasDatos .Estructura .imgEstructura {
+  height: 90%;
+  width: 90%;
+}
+.listaEstructurasDatos .Estructura .imgEstructura:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=estructuraCategoriaCard.module.css.map */

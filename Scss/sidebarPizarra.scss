@@ -1,6 +1,6 @@
 @import 'Header.module';
 $widthSidebarPizarra : 200px;
-#sidebar{
+#sidebarPizarra{
     position: fixed;
     width: $widthSidebarPizarra;
     height: 100%;
@@ -9,6 +9,9 @@ $widthSidebarPizarra : 200px;
     transition: all 500ms linear;
     margin-top:$heightHeader;
     border: $border;
+    h2{
+        background-color: aqua;
+    }
     .listaEstructurasDatos {
         background-color: red;
         display: grid;
@@ -25,18 +28,18 @@ $widthSidebarPizarra : 200px;
         
     }
 }
-#sidebar.active{
+#sidebarPizarra.active{
     left: 0;
     
 }
 
-#sidebar .toggle-btn{
+#sidebarPizarra .toggle-btn{
     position: absolute;
     left: 230px;
     top: 20px;
     cursor: pointer;
 }
-#sidebar .toggle-btn span{
+#sidebarPizarra .toggle-btn span{
     display: block;
     width: 40px;
     text-align: center;

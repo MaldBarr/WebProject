@@ -42,60 +42,90 @@
   height: 45px;
 }
 .BTHeader nav .listaRedirecciones .redireccion2 a svg:hover {
-  fill: antiquewhite;
+  fill: rgb(248, 237, 222);
   transition: fill 0.2s ease-in-out;
 }
+.BTHeader nav .menuButton {
+  display: none;
+}
 
+@media screen and (max-width: 350px) {
+  .BTHeader a .logo {
+    margin-left: 10px;
+  }
+}
 @media screen and (max-width: 300px) {
   .BTHeader {
-    flex-direction: column;
     height: auto;
   }
   .BTHeader a .logo {
-    margin-left: 0;
-    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .BTHeader ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+  .BTHeader ul .redireccion1 { /*se esconde opcion 1*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion1.open {
+    display: block;
+  }
+  .BTHeader ul .redireccion2 { /*se esconde opcion 2*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion2.open {
+    display: block;
   }
   .BTHeader nav {
-    margin-top: 10px;
+    margin-right: 0px;
+  }
+  .BTHeader nav .menuButton {
+    display: block;
+    margin-right: 10px; /*se muestra el boton que contiene a opcion1 y opcion2*/
   }
 }
 #sidebarProyectos {
+  z-index: 99;
   position: fixed;
   width: 200px;
   height: 100%;
-  background-color: antiquewhite;
-  background-color: antiquewhite;
-  filter: brightness(0.9);
+  background-color: white;
   left: -200px;
   transition: all 500ms linear;
   margin-top: 10vh;
   border: 1px solid grey;
-}
-
-#sidebarProyectos.active {
-  left: 0;
   height: 100%;
 }
-#sidebarProyectos.active .links {
+#sidebarProyectos .links {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 90%;
 }
-#sidebarProyectos.active .links .listaRedirecciones {
+#sidebarProyectos .links .listaRedirecciones {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-#sidebarProyectos.active .links .listaRedirecciones a:hover, #sidebarProyectos.active .links .listaRedirecciones a:active {
+#sidebarProyectos .links .listaRedirecciones a {
   color: black;
 }
-#sidebarProyectos.active .links .listaRedirecciones a li {
+#sidebarProyectos .links .listaRedirecciones a:hover, #sidebarProyectos .links .listaRedirecciones a:active {
+  color: white;
+}
+#sidebarProyectos .links .listaRedirecciones a li {
   margin-bottom: 10px;
 }
-#sidebarProyectos.active .links .listaRedirecciones a li:hover {
-  background-color: white;
-  color: black;
+#sidebarProyectos .links .listaRedirecciones a li:hover {
+  background-color: black;
+}
+
+#sidebarProyectos.active {
+  left: 0;
 }
 
 #sidebarProyectos .toggle-btn {
@@ -103,7 +133,6 @@
   left: 230px;
   top: 20px;
   cursor: pointer;
-  height: 100%;
 }
 
 #sidebarProyectos .toggle-btn span {

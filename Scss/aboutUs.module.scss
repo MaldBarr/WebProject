@@ -2,7 +2,6 @@ $background: antiquewhite;
 
 .contenido {
     background-color: $background;
-    //width: $minwidth;
     height: 90vh;
     display: flex;
     justify-content: center;
@@ -13,7 +12,6 @@ $background: antiquewhite;
         .titulo{
             padding-bottom: 20px;
             padding-top: 50px;
-
         }
     }
 

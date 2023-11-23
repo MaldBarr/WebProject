@@ -42,63 +42,52 @@
   height: 45px;
 }
 .BTHeader nav .listaRedirecciones .redireccion2 a svg:hover {
-  fill: antiquewhite;
+  fill: rgb(248, 237, 222);
   transition: fill 0.2s ease-in-out;
 }
+.BTHeader nav .menuButton {
+  display: none;
+}
 
+@media screen and (max-width: 350px) {
+  .BTHeader a .logo {
+    margin-left: 10px;
+  }
+}
 @media screen and (max-width: 300px) {
   .BTHeader {
-    flex-direction: column;
     height: auto;
   }
   .BTHeader a .logo {
-    margin-left: 0;
-    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .BTHeader ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+  .BTHeader ul .redireccion1 { /*se esconde opcion 1*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion1.open {
+    display: block;
+  }
+  .BTHeader ul .redireccion2 { /*se esconde opcion 2*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion2.open {
+    display: block;
   }
   .BTHeader nav {
-    margin-top: 10px;
+    margin-right: 0px;
+  }
+  .BTHeader nav .menuButton {
+    display: block;
+    margin-right: 10px; /*se muestra el boton que contiene a opcion1 y opcion2*/
   }
 }
-/*
-*{
-    margin: 0px !important;
-    padding: 0px !important;
-}*/
-/*
-body{
-    margin: 0;
-    padding: 0;
-    display: flex !important;
-    background-color: $red;
-}
-
-section{
-    min-width: $minwidth;
-    min-height: $altura;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-input{
-    font-size: larger;
-}
-form{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-
-#check{
-    display: inline;
-    text-align: left !important;
-    align-items: left !important; 
-}
-
-button{
-    cursor: pointer;
-}*/
 .login {
   height: 100vh;
   display: flex;
@@ -107,7 +96,7 @@ button{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: antiquewhite;
+  background-color: rgb(248, 237, 222);
   width: 50vw;
   height: 100%;
 }
@@ -129,6 +118,18 @@ button{
 }
 .login .section2 .optionsToGo .links button {
   margin: 0 5px;
+}
+
+@media screen and (max-width: 380px) {
+  .login {
+    display: block;
+  }
+  .login .mainSection {
+    width: 100%;
+  }
+  .login .section2 {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=login.module.css.map */

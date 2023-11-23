@@ -23,6 +23,8 @@ h5,h3,h4{
 ul{
   list-style: none;
   /*arreglar ul*/
+  margin-block-start: 0;
+  margin-block-end: 0;
 
   padding-inline-start: 0;
 

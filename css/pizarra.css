@@ -42,21 +42,50 @@
   height: 45px;
 }
 .BTHeader nav .listaRedirecciones .redireccion2 a svg:hover {
-  fill: antiquewhite;
+  fill: rgb(248, 237, 222);
   transition: fill 0.2s ease-in-out;
 }
+.BTHeader nav .menuButton {
+  display: none;
+}
 
+@media screen and (max-width: 350px) {
+  .BTHeader a .logo {
+    margin-left: 10px;
+  }
+}
 @media screen and (max-width: 300px) {
   .BTHeader {
-    flex-direction: column;
     height: auto;
   }
   .BTHeader a .logo {
-    margin-left: 0;
-    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .BTHeader ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+  .BTHeader ul .redireccion1 { /*se esconde opcion 1*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion1.open {
+    display: block;
+  }
+  .BTHeader ul .redireccion2 { /*se esconde opcion 2*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion2.open {
+    display: block;
   }
   .BTHeader nav {
-    margin-top: 10px;
+    margin-right: 0px;
+  }
+  .BTHeader nav .menuButton {
+    display: block;
+    margin-right: 10px; /*se muestra el boton que contiene a opcion1 y opcion2*/
   }
 }
 .BTHeader {
@@ -103,24 +132,53 @@
   height: 45px;
 }
 .BTHeader nav .listaRedirecciones .redireccion2 a svg:hover {
-  fill: antiquewhite;
+  fill: rgb(248, 237, 222);
   transition: fill 0.2s ease-in-out;
 }
+.BTHeader nav .menuButton {
+  display: none;
+}
 
+@media screen and (max-width: 350px) {
+  .BTHeader a .logo {
+    margin-left: 10px;
+  }
+}
 @media screen and (max-width: 300px) {
   .BTHeader {
-    flex-direction: column;
     height: auto;
   }
   .BTHeader a .logo {
-    margin-left: 0;
-    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .BTHeader ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+  .BTHeader ul .redireccion1 { /*se esconde opcion 1*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion1.open {
+    display: block;
+  }
+  .BTHeader ul .redireccion2 { /*se esconde opcion 2*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion2.open {
+    display: block;
   }
   .BTHeader nav {
-    margin-top: 10px;
+    margin-right: 0px;
+  }
+  .BTHeader nav .menuButton {
+    display: block;
+    margin-right: 10px; /*se muestra el boton que contiene a opcion1 y opcion2*/
   }
 }
-#sidebar {
+#sidebarPizarra {
   position: fixed;
   width: 200px;
   height: 100%;
@@ -130,33 +188,36 @@
   margin-top: 10vh;
   border: 1px solid grey;
 }
-#sidebar .listaEstructurasDatos {
+#sidebarPizarra h2 {
+  background-color: aqua;
+}
+#sidebarPizarra .listaEstructurasDatos {
   background-color: red;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   width: 100%;
 }
-#sidebar .listaEstructurasDatos .Estructura {
+#sidebarPizarra .listaEstructurasDatos .Estructura {
   width: 100%;
   height: 60px;
 }
-#sidebar .listaEstructurasDatos .Estructura .imgEstructura {
+#sidebarPizarra .listaEstructurasDatos .Estructura .imgEstructura {
   height: 60px;
   width: 60px;
 }
 
-#sidebar.active {
+#sidebarPizarra.active {
   left: 0;
 }
 
-#sidebar .toggle-btn {
+#sidebarPizarra .toggle-btn {
   position: absolute;
   left: 230px;
   top: 20px;
   cursor: pointer;
 }
 
-#sidebar .toggle-btn span {
+#sidebarPizarra .toggle-btn span {
   display: block;
   width: 40px;
   text-align: center;

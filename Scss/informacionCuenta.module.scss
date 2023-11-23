@@ -1,0 +1,30 @@
+@import 'Header.module';
+@import 'SidebarCuenta';
+
+.informacionCuenta{
+    background-color: white;
+    padding-top:$heightHeader;
+    padding-left:$widthSidebarCuenta;
+    height: 100vh;
+    width: 100%;
+    .datos{
+        width: 100%;
+        display: flex;
+        align-items: center; /* Centra los elementos verticalmente */
+        justify-content: center;
+        .containerColumnas{
+            display: flex; /* Añade esto para usar Flexbox */
+            flex-wrap: wrap;
+            gap:40px; /* Añade un espacio entre las columnas */
+            .column {
+                flex: 1; /* Esto hace que cada columna tome la misma cantidad de espacio */
+                padding: 10px; /* Añade un poco de espacio alrededor del texto */
+            }
+        }
+    }
+}
+@media screen and (max-width: 300px) {
+    .informacionCuenta{
+        padding-left:0;
+    }
+}

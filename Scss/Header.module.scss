@@ -3,6 +3,7 @@
 $widthHeader: 100%;
 $heightHeader:10vh;
 $border:  1px solid grey;
+
 .BTHeader{
     display: flex;
     align-items: center;
@@ -53,20 +54,55 @@ $border:  1px solid grey;
                 }    
             }
         }
+        .menuButton {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 350px) {
+    .BTHeader{
+        a{
+            .logo{
+                margin-left:10px;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 300px) {
+
     .BTHeader {
-      flex-direction: column;
       height: auto;
-    }
-    .BTHeader a .logo {
-      margin-left: 0;
-      margin-bottom: 10px;
-    }
-    .BTHeader nav {
-      margin-top: 10px;
-    }
+      a{
+        .logo{
+            margin-left: 10px;
+            margin-bottom: 0px;
+        }
+      }
+      ul{
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        .redireccion1{/*se esconde opcion 1*/
+            padding:0px;
+            display: none;
+            &.open {
+                display: block;
+            }
+        }
+        .redireccion2{/*se esconde opcion 2*/
+            padding: 0px;
+            display: none;
+            &.open {
+                display: block;
+            }
+        }
+      }
+      nav {
+        margin-right: 0px;
+        .menuButton {
+            display: block;
+            margin-right: 10px;/*se muestra el boton que contiene a opcion1 y opcion2*/
+        }
+      }
   }
-  
+}

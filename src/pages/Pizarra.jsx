@@ -6,7 +6,7 @@ import PizarraManipular from '../componentes/PizarraManipular';
 function Pizarra() {
     return (
         <>
-        <HeaderPizarra/>
+        <HeaderPizarra nombreProyecto='Proyecto 1'/>
         <SidebarPizarra/>
         <PizarraManipular className={styles.PizarraManipular} />
         </>

@@ -2,31 +2,62 @@
 @import 'Header.module';
 
 .HeaderPizarra{
-    display: flex;
-    background-color: $carton;
     position: fixed;
+    display: flex;
+    justify-content: space-between; /* Añade esto para distribuir el espacio entre los elementos */
+    background-color: $carton;
     width: $widthHeader;
-    padding-left:20px;
     height: $heightHeader;
-    gap:50px;
     z-index: 99;
     border: $border;
-    a{
-        img{
-            height: 80px;
+    .leftContainer {
+        padding-left:30px;
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        height: 100%;
+        a{
+            height: 100%;
+            img{
+                height: 100%;
+            }
+        }
+        .container{
+            height: 100%;
+            text-align:left;
+            h3{
+                padding-top:10px;
+            }
+            nav{
+                padding-top: 10px;
+                ul{
+                    display: flex;
+                    gap:10px;
+                    li{
+                        p{
+                            margin-block-start:0;
+                            margin-block-end:0;
+                        }
+                    }
+                }
+            }
+      
         }
     }
-    .container{
+    .imgCuenta{
+        padding-right:60px;
         height: 100%;
-        h3{
-            padding-top:10px;
+        display: flex;
+        align-items: center;
+    }
+   
+}
+@media screen and (max-width: 375px) {
+    .HeaderPizarra{
+        .leftContainer{
+            padding-left:0;
+            gap:0px;
+
         }
-        .opciones{
-            ul{
-                display: flex;
-                gap: 10px;
-                
-            }
-        }   
     }
 }

@@ -1,0 +1,128 @@
+.BTHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6bc81;
+  width: 100%;
+  /*padding: 30px 0;*/
+  position: fixed; /**/
+  height: 10vh;
+  z-index: 100;
+  border: 1px solid grey;
+  /*max-width: 1280px;*/
+}
+.BTHeader a .logo {
+  margin-left: 30px;
+  max-height: 80px;
+}
+.BTHeader nav {
+  margin-right: 80px;
+}
+.BTHeader nav .listaRedirecciones {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 {
+  padding: 10px;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 a { /*a == Link*/
+  text-decoration: none !important;
+  color: black;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 a:hover {
+  color: white;
+  font-weight: bold;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 {
+  padding: 4px;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 a svg {
+  width: 45px;
+  height: 45px;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 a svg:hover {
+  fill: rgb(248, 237, 222);
+  transition: fill 0.2s ease-in-out;
+}
+.BTHeader nav .menuButton {
+  display: none;
+}
+
+@media screen and (max-width: 350px) {
+  .BTHeader a .logo {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .BTHeader {
+    height: auto;
+  }
+  .BTHeader a .logo {
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .BTHeader ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+  .BTHeader ul .redireccion1 { /*se esconde opcion 1*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion1.open {
+    display: block;
+  }
+  .BTHeader ul .redireccion2 { /*se esconde opcion 2*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion2.open {
+    display: block;
+  }
+  .BTHeader nav {
+    margin-right: 0px;
+  }
+  .BTHeader nav .menuButton {
+    display: block;
+    margin-right: 10px; /*se muestra el boton que contiene a opcion1 y opcion2*/
+  }
+}
+#sidebarPizarra {
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  background-color: white;
+  left: -220px;
+  transition: all 500ms linear;
+  margin-top: 10vh;
+  border: 1px solid grey;
+}
+#sidebarPizarra h3 {
+  padding: 15px 0;
+  text-align: left;
+  padding-left: 20px;
+}
+#sidebarPizarra h3:hover {
+  background-color: rgb(248, 237, 222);
+  cursor: pointer;
+}
+
+#sidebarPizarra.active {
+  left: 0;
+}
+
+#sidebarPizarra .toggleBtn {
+  position: absolute;
+  left: 230px;
+  top: 20px;
+  cursor: pointer;
+}
+
+#sidebarPizarra .toggleBtn span {
+  display: block;
+  width: 40px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=sidebarPizarra.module.css.map */

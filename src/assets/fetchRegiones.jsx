@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import regionesJSON from '/src/JSON/regiones.json';
+import styles from '/css/fetchRegiones.module.css'
 
 function fetchRegiones() {
     const [regiones, setRegiones] = useState([]);
@@ -8,7 +9,7 @@ function fetchRegiones() {
     }, []);
     return (
         <>
-            <select id="sel_region" name="sel_region" required="">
+            <select id={styles.sel_regiones} name="sel_region" required="">
                 {regiones.map((data,i) => (
                     <option value={i} key={i}>
                         {data.region}
@@ -18,5 +19,11 @@ function fetchRegiones() {
         </>
     )
 }
+/*
+#sel_region{
+                    background-color: red;
+                    width: 1px;
+                }
+             */
 
 export default fetchRegiones;

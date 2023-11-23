@@ -1,21 +1,14 @@
 import style from '/css/Cuenta.module.css';
 import Header from './Header';
+import SidebarCuenta from '../componentes/SidebarCuenta';
+import InformacionCuenta from '../componentes/InformacionCuenta';
 
 function Cuenta() {
     return (
         <>
         <Header/>
-        <div className={style.configuracionCuenta}>
-            <div className={style.userName}>
-                <h3>Hola</h3>
-                <h2>Usuario</h2>
-            </div>
-            <nav>
-                <button className={style.button}>Informacion general</button> <br />
-                <button className={style.button}>Configurar Cuenta</button><br />
-                <button className={style.button}>Cerrar Sesion</button>
-            </nav>
-        </div>
+        <SidebarCuenta/>
+        <InformacionCuenta nombre="nombre" rut="21312" email="email" region="region" comuna="comuna" contrasena="contraseña" className={style.configuracionCuenta} />
         </>
     );
 }
