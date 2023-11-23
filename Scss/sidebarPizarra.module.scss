@@ -9,7 +9,9 @@ $widthSidebarPizarra : 220px;
     transition: all 500ms linear;
     margin-top:$heightHeader;
     border: $border;
-    h3{
+    overflow-y: auto; /* Agrega esta línea */
+
+    h3{ 
         padding:15px 0;
         text-align: left;
         padding-left:20px;
@@ -18,7 +20,9 @@ $widthSidebarPizarra : 220px;
             cursor: pointer;
         }
     }
+   
 }
+
 #sidebarPizarra.active{
     left: 0;
 }
@@ -33,4 +37,16 @@ $widthSidebarPizarra : 220px;
     display: block;
     width: 40px;
     text-align: center;
+}
+
+#sidebarPizarra::-webkit-scrollbar {
+    width: 5px; /* Cambia esto al grosor que desees */
+}
+ 
+#sidebarPizarra::-webkit-scrollbar-thumb {
+    background: #a8a7a7; /* Cambia esto al color que desees para la barra de desplazamiento */
+}
+
+#sidebarPizarra::-webkit-scrollbar-thumb:hover {
+    background: #969494; /* Cambia esto al color que desees cuando se pasa el cursor sobre la barra de desplazamiento */
 }

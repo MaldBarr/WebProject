@@ -4,12 +4,12 @@ import EstructuraCategoriaCard from './EstructuraCategoriaCard';
 
 function SidebarPizarra() {
     const [isActive, setIsActive] = useState(true);
-    const [activeSection, setActiveSection] = useState(null);
+    const [activeSections, setActiveSections] = useState({});
     const toggleSidebar = () => {
         setIsActive(!isActive);
     };
     const toggleSection = (section) => {
-        setActiveSection(activeSection === section ? null : section);
+        setActiveSections({...activeSections, [section]: !activeSections[section]});
     };
     return (
         <div id={styles.sidebarPizarra} className={isActive ? styles.active : ""} >
@@ -18,19 +18,32 @@ function SidebarPizarra() {
             </div>
             <h2> Estructuras de <br></br>datos </h2>
             <h3 onClick={() => toggleSection('Arreglos')}> Arreglos </h3>
-            {activeSection === 'Arreglos' && <EstructuraCategoriaCard images={[{nameImg: "linkedList", altImg: "LinkedList"}, 
-            {nameImg: "linkedListWithGhostNode", altImg: "Linked list with ghost node"},
-            {nameImg: "DoubleLinkedlist", altImg: "Double linked list"},
-            {nameImg: "DoubleLinkedlistWithGhostNode", altImg: "Double linked list with ghost node"}]} />}
+            {activeSections.Arreglos && <EstructuraCategoriaCard images={[
+            {nameImg: "array", altImg: "Array"},
+            {nameImg: "matrix", altImg: "Matrix", "cuadrado":true}]}/>}
 
             <h3 onClick={() => toggleSection('Listas')}> Listas </h3>
-            {activeSection === 'Listas' && <EstructuraCategoriaCard images={[{nameImg: "linkedList", altImg: "LinkedList"}, 
+            {activeSections.Listas && <EstructuraCategoriaCard images={[{nameImg: "linkedList", altImg: "LinkedList"}, 
+            {nameImg: "linkedListWithGhostNode", altImg: "Linked list with ghost node"},
+            {nameImg: "DoubleLinkedlist", altImg: "Double linked list"},
+            {nameImg: "DoubleLinkedlistWithGhostNode", altImg: "Double linked list with ghost node"},
+            {nameImg: "circularLinkedList", altImg: "Circular linked list", "cuadrado" : true},
+            {nameImg: "circularLinkedListWithGhostNode", altImg: "Circular linked list with ghost node","cuadrado" : true},
+            {nameImg: "circularDoubleLinkedList", altImg: "Circular Double linked list with ghost node","cuadrado" : true},
+            {nameImg: "circularDoubleLinkedListWithGhostNode", altImg: "Circular Double linked list with ghost node","cuadrado" : true}
+        ]} />}
+            
+            <h3 onClick={() => toggleSection('Arboles')}> Arboles </h3>
+            {activeSections.Arboles && <EstructuraCategoriaCard images={[{nameImg: "ABB", altImg: "Binary three",'cuadrado':true}]} />}
+            
+            <h3 onClick={() => toggleSection('PilasColas')}> Pilas y colas </h3>
+            {activeSections.PilasColas && <EstructuraCategoriaCard images={[{nameImg: "linkedList", altImg: "LinkedList"}, 
             {nameImg: "linkedListWithGhostNode", altImg: "Linked list with ghost node"},
             {nameImg: "DoubleLinkedlist", altImg: "Double linked list"},
             {nameImg: "DoubleLinkedlistWithGhostNode", altImg: "Double linked list with ghost node"}]} />}
-            <h3> Arboles </h3>
-            <h3> Pilas y colas </h3>
-            <h3> Otros </h3>
+           
+            <h3 onClick={() => toggleSection('otros')}> Otros </h3>
+            {activeSections.otros && <EstructuraCategoriaCard images={[{nameImg: "node", altImg: "Nodo", "cuadrado":true}]} />}
         </div>
     );
 }
