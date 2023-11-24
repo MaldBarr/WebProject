@@ -1,0 +1,14 @@
+.cardUsuario {
+  border-spacing: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+.cardUsuario td {
+  height: 100%;
+}
+.cardUsuario td img {
+  width: 50px;
+}
+
+/*# sourceMappingURL=usuarioCard.module.css.map */

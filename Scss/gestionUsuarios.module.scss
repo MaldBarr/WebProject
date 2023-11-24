@@ -1,7 +1,50 @@
 @import 'Header.module';
 @import 'sidebarCuenta';
+
 #gestionUsuarios{
     padding-top:$heightHeader;
-    padding-left:$widthSidebarCuenta;
-    
+    margin-left:$widthSidebarCuenta;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:150px;
+    height: 100-$heightHeader;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        .busqueda{
+            margin-bottom: 20px;
+            width: 50%;
+        }
+        table{
+            background-color: white;
+            border: 1px solid black;
+            text-align: center;
+            width: 80%;
+            thead{
+                
+                tr{
+                    th{
+                        padding: 10px;
+                    }
+                }
+                
+            }
+            tbody{
+                tr{
+                    td{
+                        padding: 10px;
+                        img{
+                            max-width: 100px;
+                            max-height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
 }
