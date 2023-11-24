@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '/css/sidebarPizarra.module.css'; // Asegúrate de que la ruta sea correcta
+import styles from '/css/sidebarPizarra.module.css'; 
 import EstructuraCategoriaCard from './EstructuraCategoriaCard';
 
 function SidebarPizarra() {
@@ -12,10 +12,12 @@ function SidebarPizarra() {
         setActiveSections({...activeSections, [section]: !activeSections[section]});
     };
     return (
-        <div id={styles.sidebarPizarra} className={isActive ? styles.active : ""} >
-            <div className={styles.toggleBtn} onClick={toggleSidebar}>
+        <>
+        <div id={styles.toggleBtn} onClick={toggleSidebar} 
+        className={isActive ? styles.active : ""}>
                 <span>☰</span>
-            </div>
+        </div>
+        <div id={styles.sidebarPizarra} className={isActive ? styles.active : ""} >
             <h2> Estructuras de <br></br>datos </h2>
             <h3 onClick={() => toggleSection('Arreglos')}> Arreglos </h3>
             {activeSections.Arreglos && <EstructuraCategoriaCard images={[
@@ -45,6 +47,7 @@ function SidebarPizarra() {
             <h3 onClick={() => toggleSection('otros')}> Otros </h3>
             {activeSections.otros && <EstructuraCategoriaCard images={[{nameImg: "node", altImg: "Nodo", "cuadrado":true}]} />}
         </div>
+        </>
     );
 }
 

@@ -7,81 +7,72 @@ import { useNavigate } from 'react-router-dom';
 
        
     })
+/*
+si retorna 0, validacion incorrecta 
+si retorna 1 , se valido correctamente siendo usuario normal
+si retorna 2, se valido correctamente siendo admin
+*/
+/*1. se revisa correo electronico si contiene @gmail.com O @bt.com 
+2. Si contiene el paso 1 entonces : si se validan todos los campos y su correo contiene @gmail.com => retorna 1 |
+ Si  se validan todos los campos y su correo contiene @bt.com => retorna 2
+ Si no se valida algun campo independiente de su correo => retorna 0 
+*/
+const minimoLargoContrasena = 5;
 
 function validateLogin(){
-    let validated = false;
-    /* VERSION ANTIGUA ESTABA EN     $(document).ready(function(){
-    $("#submitLogin").click(function(){
-        event.preventDefault();
-        var email = $("#email").val();
-        var contra = $("#password").val();
-        var validateMail = false;
-        var validatePass = false;
-        console.log("se ejecuto login")
-        if (!validarCorreoElectronico(email)){
-            $("#1").text("Correo invalido");
-            validateMail = false;
-        }
-        else{
-            $("#1").text("");
-            validateMail = true;
-        }
-        if (contra == "") {
-            $("#2").text("Ingresa una contraseña");
-            validatePass = false;
-        } else {
-            $("#2").text("");
-            validatePass = true;
-        }
-        if (validatePass && validateMail){
-            //cargar Cuenta
-            console.log("log exitoso");
-            validated = true;
-            
-
-        }
-    })*/
+    let validated = 0;
     var email = $("#email").val();
-        var contra = $("#password").val();
-        var validateMail = false;
-        var validatePass = false;
-        console.log("se ejecuto login")
-        if (!validarCorreoElectronico(email)){
-            $("#1").text("Correo invalido");
-            validateMail = false;
+    var contra = $("#password").val();
+    var validateMail = false;
+    var validatePass = false;
+    console.log("se ejecuto login")
+    if (!validarCorreoElectronico(email)){
+        $("#1").text("Correo invalido");
+        validateMail = false;
+    }
+    else{
+        $("#1").text("");
+        validateMail = true;
+        if (email.includes("@gmail.com")) {
+            validated = 1;
+        } else if (email.includes("@bt.com")) {
+            validated = 2;
         }
-        else{
-            $("#1").text("");
-            validateMail = true;
-        }
-        if (contra == "") {
-            $("#2").text("Ingresa una contraseña");
-            validatePass = false;
-        } else {
-            $("#2").text("");
-            validatePass = true;
-        }
-        if (validatePass && validateMail){
-            //cargar Cuenta
-            console.log("log exitoso");
-            validated = true;
-        }
+    }
+    if (contra == "") {
+        $("#2").text("Ingresa una contraseña");
+        validatePass = false;
+
+    }else if (contra != undefined && contra.length < minimoLargoContrasena){
+        $("#2").text("Ingresa una contraseña de al menos " +minimoLargoContrasena +" caracteres");
+        validatePass = false;
+    } 
+    else {
+        $("#2").text("");
+        validatePass = true;
+    }
+    if (!(validatePass && validateMail)){
+        validated = 0;
+    }
     return validated;
 }
 
 function validarCorreoElectronico(correo) {
-    // Expresión regular para validar direcciones de correo electrónico
-    var expresionRegular = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+    // Expresión regular para validar direcciones de correo electrónico @GMAIL o @BT
+    var expresionRegular = /^[a-zA-Z0-9._-]+@(gmail.com|bt.com)$/;
     // Usar el método test para verificar si el correo coincide con la expresión regular
     return expresionRegular.test(correo);
-  }
+}
+
 
 function Login(){
     const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
-        if(validateLogin()){
+        if(validateLogin() === 1 ){
             navigate("/proyectos");
+        }else if(validateLogin() === 2){
+            navigate("/cuentaAdmin");
         }
     }
     return (
@@ -123,3 +114,35 @@ function Login(){
     );
 }
 export default Login;
+
+  /* VERSION ANTIGUA ESTABA EN     $(document).ready(function(){
+    $("#submitLogin").click(function(){
+        event.preventDefault();
+        var email = $("#email").val();
+        var contra = $("#password").val();
+        var validateMail = false;
+        var validatePass = false;
+        console.log("se ejecuto login")
+        if (!validarCorreoElectronico(email)){
+            $("#1").text("Correo invalido");
+            validateMail = false;
+        }
+        else{
+            $("#1").text("");
+            validateMail = true;
+        }
+        if (contra == "") {
+            $("#2").text("Ingresa una contraseña");
+            validatePass = false;
+        } else {
+            $("#2").text("");
+            validatePass = true;
+        }
+        if (validatePass && validateMail){
+            //cargar Cuenta
+            console.log("log exitoso");
+            validated = true;
+            
+
+        }
+    })*/

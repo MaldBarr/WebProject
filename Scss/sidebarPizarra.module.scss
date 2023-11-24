@@ -1,16 +1,19 @@
 @import 'Header.module';
+@import 'paletaColores';
+
 $widthSidebarPizarra : 220px;
 #sidebarPizarra{
     position: fixed;
     width: $widthSidebarPizarra;
     height: 100%;
-    background-color: white;
+    background-color: $sidebarColor;
     left: -$widthSidebarPizarra;
     transition: all 500ms linear;
     margin-top:$heightHeader;
     border: $border;
-    overflow-y: auto; /* Agrega esta línea */
-
+    overflow-y: auto; /* Cuando esta esta linea entonces <div className={styles.toggleBtn} onClick={toggleSidebar}>
+    <span>☰</span>
+</div> desaparece. pero si lo elimino aparece nuevamente*/
     h3{ 
         padding:15px 0;
         text-align: left;
@@ -18,27 +21,43 @@ $widthSidebarPizarra : 220px;
         &:hover{
             background-color: $background;
             cursor: pointer;
+            border-left: 5px solid black;
         }
     }
    
 }
 
+
 #sidebarPizarra.active{
     left: 0;
 }
 
-#sidebarPizarra .toggleBtn{
+#toggleBtn.active{
     position: absolute;
     left: 230px;
     top: 20px;
     cursor: pointer;
+    margin-top:$heightHeader;
+    padding-top:0;
+    transition: all 500ms linear;
+
 }
-#sidebarPizarra .toggleBtn span{
+#toggleBtn span{
     display: block;
     width: 40px;
-    text-align: center;
+    text-align:  center;
+}
+#toggleBtn{
+    left: 0;
+    top: 20px;
+    padding-top:$heightHeader;
+    transition: all 500ms linear;
+    position: fixed;
+    cursor: pointer;
+
 }
 
+/*scroll*/
 #sidebarPizarra::-webkit-scrollbar {
     width: 5px; /* Cambia esto al grosor que desees */
 }

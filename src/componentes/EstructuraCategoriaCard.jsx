@@ -5,7 +5,7 @@ function EstructuraCategoriaCard(props) {
 
     return (
         <>
-        <ul className={styles.listaEstructurasDatos}>
+        <ul className={styles.listaEstructurasDatos} id={styles.animacion}>
             {props.images.map((image, index) => {
                 let imageStyle = image.cuadrado ? {height: '120px'} : {height: '40px'};
                 return (

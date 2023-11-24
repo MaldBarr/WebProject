@@ -7,8 +7,10 @@ function Cuenta() {
     return (
         <>
         <Header/>
-        <SidebarCuenta/>
-        <InformacionCuenta nombre="nombre" rut="21312" email="email" region="region" comuna="comuna" contrasena="contraseña" className={style.configuracionCuenta} />
+        <SidebarCuenta nombre='Pepito' categorias={[
+        {nombreCategoria: 'Configurar Cuenta', ruta: '/configurar-cuenta', predeterminado: true},
+        {nombreCategoria: 'Cerrar Sesión', ruta: '/InicioPagina', predeterminado: false}
+        ]}/>        <InformacionCuenta nombre="nombre" rut="21312" email="email" region="region" comuna="comuna" contrasena="contraseña" className={style.configuracionCuenta} />
         </>
     );
 }

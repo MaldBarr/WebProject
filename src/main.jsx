@@ -11,9 +11,10 @@ import Proyectos from './pages/Proyectos';
 import Registro from './pages/Registro';
 import Soporte from './pages/Soporte';
 import Inicio from './pages/inicio';
-import GestionUsuarios from './pages/GestionUsuarios';
+import GestionUsuarios from './componentes/GestionUsuarios';
 
 import App from './App';
+import CuentaAdmin from './pages/CuentaAdmin';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                   <Route path="/registro" element={<Registro />} />
                   <Route path="/soporte" element={<Soporte />} />
                   <Route path="/gestionUsuarios" element={<GestionUsuarios/>} />
+                  <Route path="/cuentaAdmin" element={<CuentaAdmin/>} />
 
         </Routes>
     </BrowserRouter>

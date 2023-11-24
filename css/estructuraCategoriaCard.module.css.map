@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/estructuraCategoriaCard.module.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;EACA;;AACA;EACI;AACA;EAKA;;AAHA;EACI;;AAGJ;EACI;EACA;;AACA;EACI","file":"estructuraCategoriaCard.module.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/estructuraCategoriaCard.module.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;;AACA;EACI;AACA;EAKA;;AAHA;EACI;;AAGJ;EACI;EACA;;AACA;EACI;;;AAKhB;EACI;;;AAGJ;EACI;IAAI;;EACJ;IAAM","file":"estructuraCategoriaCard.module.css"}

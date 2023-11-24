@@ -183,7 +183,7 @@
   position: fixed;
   width: 200px;
   height: 100%;
-  background-color: white;
+  background-color: rgb(230, 225, 225);
   left: -200px;
   transition: all 500ms linear;
   margin-top: 10vh;
@@ -214,6 +214,9 @@
 #sidebarCuenta nav ul li:hover {
   background-color: rgb(210, 205, 205);
 }
+#sidebarCuenta nav ul li a p {
+  color: black;
+}
 
 #sidebarCuenta.active {
   left: 0;
@@ -224,7 +227,6 @@
   left: 230px;
   top: 20px;
   cursor: pointer;
-  display: none;
 }
 #sidebarCuenta .toggle-btn span {
   display: block;

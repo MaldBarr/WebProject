@@ -220,24 +220,39 @@
   padding-bottom: 30px;
   height: 100%;
   width: 100%;
+  background-color: white;
 }
 .proyectos .containerProyectos {
   padding-left: 30px;
   padding-right: 30px;
 }
 .proyectos .containerProyectos h3 {
-  padding: 30px;
+  padding: 30px 0;
 }
 .proyectos .containerProyectos .seccionCrearProyecto {
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding-left: 70px;
 }
 .proyectos .containerProyectos .seccionMisProyectos {
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-row-gap: 20px;
+  padding-left: 70px;
+}
+
+@media screen and (max-width: 400px) {
+  .proyectos .containerProyectos {
+    padding: 0;
+  }
+  .proyectos .containerProyectos .seccionCrearProyecto {
+    padding-left: 0;
+  }
+  .proyectos .containerProyectos .seccionMisProyectos {
+    padding-left: 0;
+  }
 }
 
 /*# sourceMappingURL=proyectos.module.css.map */

@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     width: 100%;
-    transition: all 500ms linear; 
     .Estructura{
         width: 90%;
         /*height: 60px;*//*altura para las imagenes*/
@@ -19,4 +18,12 @@
             }
         }
     }
+}
+#animacion {
+    animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
 }
