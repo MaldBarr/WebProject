@@ -22,7 +22,7 @@ const configuracion={
     port:3000
 }
 app.listen(configuracion,()=>{
-    console.log('Servidor iniciado en http://localhost:${configuracion.port}')
+    console.log('Servidor iniciado en http://localhost:'+configuracion.port)
 })
 
 
@@ -42,6 +42,13 @@ app.post("/Login",(req:any,res:any)=>{
     let username=req.body.username;
     let password=req.body.password;
     connection.query('SELECT * FROM usuarios WHERE username=? AND password=?',[username,password],function(err:any,rows:any,fields:any){
+        res.send(JSON.stringify(rows));
+    });
+})
+
+//Parte de administrador
+app.get("/Cuenta-Admninistrador",(req:any,res:any)=>{
+    connection.query('SELECT * FROM usuarios',function(err:any,rows:any,fields:any){
         res.send(JSON.stringify(rows));
     });
 })
