@@ -33,7 +33,7 @@ app.put("/Registro",(req:any,res:any)=>{
     let region=req.body.region;
     let comuna=req.body.comuna;
     let password=req.body.password;
-    connection.query('INSERT INTO usuarios SET ?,?,?,?,?,?',[username,rut,email,region,comuna,password],function(err:any,rows:any,fields:any){
+    connection.query('INSERT INTO usuarios SET ?,?,?,?,?,SHA(?)',[username,rut,email,region,comuna,password],function(err:any,rows:any,fields:any){
         res.send(JSON.stringify(rows));
     });
 })
@@ -41,7 +41,7 @@ app.put("/Registro",(req:any,res:any)=>{
 app.post("/Login",(req:any,res:any)=>{
     let username=req.body.username;
     let password=req.body.password;
-    connection.query('SELECT * FROM usuarios WHERE username=? AND password=?',[username,password],function(err:any,rows:any,fields:any){
+    connection.query('SELECT * FROM usuarios WHERE username=? AND password=SHA(?)',[username,password],function(err:any,rows:any,fields:any){
         res.send(JSON.stringify(rows));
     });
 })

@@ -30,14 +30,14 @@ app.put("/Registro", (req, res) => {
     let region = req.body.region;
     let comuna = req.body.comuna;
     let password = req.body.password;
-    connection.query('INSERT INTO usuarios SET ?,?,?,?,?,?', [username, rut, email, region, comuna, password], function (err, rows, fields) {
+    connection.query('INSERT INTO usuarios SET ?,?,?,?,?,SHA(?)', [username, rut, email, region, comuna, password], function (err, rows, fields) {
         res.send(JSON.stringify(rows));
     });
 });
 app.post("/Login", (req, res) => {
     let username = req.body.username;
     let password = req.body.password;
-    connection.query('SELECT * FROM usuarios WHERE username=? AND password=?', [username, password], function (err, rows, fields) {
+    connection.query('SELECT * FROM usuarios WHERE username=? AND password=SHA(?)', [username, password], function (err, rows, fields) {
         res.send(JSON.stringify(rows));
     });
 });
