@@ -42,8 +42,14 @@ app.post("/Login", (req, res) => {
     });
 });
 //Parte de administrador
-app.get("/Cuenta-Admninistrador", (req, res) => {
+app.get("/gestionUsuarios", (req, res) => {
     connection.query('SELECT * FROM usuarios', function (err, rows, fields) {
+        res.send(JSON.stringify(rows));
+    });
+});
+app.delete("/gestionUsuarios", (req, res) => {
+    let username = req.body.username;
+    connection.query('DELETE FROM usuarios WHERE username=?', [username], function (err, rows, fields) {
         res.send(JSON.stringify(rows));
     });
 });
