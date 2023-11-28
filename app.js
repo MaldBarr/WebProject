@@ -1,13 +1,17 @@
 "use strict";
 const express = require('express');
 const mysql = require('mysql');
+const bodyParser = require('body-parser');
 const app = express();
+const cors = require('cors');
+var jsonParser = bodyParser.json();
+app.use(cors());
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
     port: 3306,
-    database: 'BaseUsers'
+    database: 'baseuser'
 });
 connection.connect(function (err) {
     if (err) {
@@ -23,31 +27,36 @@ const configuracion = {
 app.listen(configuracion, () => {
     console.log('Servidor iniciado en http://localhost:' + configuracion.port);
 });
-app.put("/Registro", (req, res) => {
+app.get("/Registro", (req, res) => {
+    connection.query('SELECT * FROM usuarios', function (err, rows, fields) {
+        res.send(JSON.stringify(rows));
+    });
+});
+app.put("/Registro", jsonParser, (req, res) => {
     let username = req.body.username;
     let rut = req.body.rut;
     let email = req.body.email;
     let region = req.body.region;
     let comuna = req.body.comuna;
     let password = req.body.password;
-    connection.query('INSERT INTO usuarios SET ?,?,?,?,?,SHA(?)', [username, rut, email, region, comuna, password], function (err, rows, fields) {
-        res.send(JSON.stringify(rows));
+    connection.query('INSERT INTO usuarios(username,rut,email,region,comuna,password) values(?,?,?,?,?,SHA1(?))', [username, rut, email, region, comuna, password], function (err, rows, fields) {
+        res.send(rows);
     });
 });
-app.post("/Login", (req, res) => {
+app.post("/Login", jsonParser, (req, res) => {
     let username = req.body.username;
     let password = req.body.password;
-    connection.query('SELECT * FROM usuarios WHERE username=? AND password=SHA(?)', [username, password], function (err, rows, fields) {
+    connection.query('SELECT * FROM usuarios WHERE username=? AND password=SHA1(?)', [username, password], function (err, rows, fields) {
         res.send(JSON.stringify(rows));
     });
 });
 //Parte de administrador
-app.get("/gestionUsuarios", (req, res) => {
+app.get("/cuentaAdmin", (req, res) => {
     connection.query('SELECT * FROM usuarios', function (err, rows, fields) {
         res.send(JSON.stringify(rows));
     });
 });
-app.delete("/gestionUsuarios", (req, res) => {
+app.delete("/cuentaAdmin", jsonParser, (req, res) => {
     let username = req.body.username;
     connection.query('DELETE FROM usuarios WHERE username=?', [username], function (err, rows, fields) {
         res.send(JSON.stringify(rows));
