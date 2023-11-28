@@ -19,17 +19,17 @@ function Inicio() {
                     </p>
                     <Link to={'/login'}><button className={style.btnCrearDiagrama}><b>Crear diagrama</b></button></Link>
                 </article>
-                <img className={style.imgMuestra} src="./public/Logo.png" alt="Imagen de diagrama"></img>
+                <img className={style.imgMuestra} src="./public/estructuras.png" alt="Imagen de diagrama"></img>
               </section>
               
               <section className={style.seccionInformacion}>
-                <img className={style.imgMuestra2} src="./public/Logo.png" alt="Imagen de diagrama"></img>
+                <img className={style.imgMuestra2} src="./public/imgMuestra.png" alt="Imagen de diagrama"></img>
                 <article className={style.seccionTexto2}>
                   <h2 className={style.tituloInformacion}>
                     <span>¿Como hacer un diagrama</span> <br />
                     <span>de estructura de datos?</span> <br />
                   </h2>
-                  <p className={style.descripcion}><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, voluptatum voluptates. Qui nihil quidem unde a nobis soluta autem sed nesciunt voluptatibus laboriosam. Reiciendis nostrum iure, maxime laudantium hic labore.</span> <br /></p>
+                  <p className={style.descripcion}><span>Simplemente abre la barra lateral, elige la estructura de dato que quieras,<br></br> arrastra y dejalo en el lugar que desees!<br></br> podras elegir las estructuras de datos que desees y visualizarlas facilmente.</span> <br /></p>
                 </article>
               </section>
         </main>

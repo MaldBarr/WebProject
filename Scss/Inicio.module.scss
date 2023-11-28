@@ -8,8 +8,9 @@ $width: 100%;
 
 .contenido{
     padding-top:100px;
+    padding-bottom:100px;
+
     background-color: $background;
-    
     width: 100%;
     /*esta seccion contiene a un texto y una imagen (texto a la izquierda e imagen a la derecha)*/
     .seccionCrearDiagrama{
@@ -54,10 +55,11 @@ $width: 100%;
         /*la imagen esta a la derecha*/
         .imgMuestra{
             height: 90%;
-            width: 60vw;
+            width: 50vw;
             padding-left:20px;
             margin-right:100px;
         }
+        margin-bottom: 200px;
     }
 
     .seccionInformacion{
@@ -65,8 +67,8 @@ $width: 100%;
         width: 100%;
 
         .imgMuestra2{
-            height: 100%;
-            width: 60vw;
+            height: 400px;
+            width: 700px;
             margin-left:100px;
         }
         .seccionTexto2{
