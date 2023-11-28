@@ -1,4 +1,3 @@
-import styles from '/css/cuentaAdmin.module.css';
 import Header from './Header';
 import SidebarCuenta from '../componentes/SidebarCuenta';
 import GestionUsuarios from '../componentes/GestionUsuarios';

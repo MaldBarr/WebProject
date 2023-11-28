@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .BTHeader {
   display: flex;
   align-items: center;
@@ -180,53 +181,132 @@
 }
 #sidebarPizarra {
   position: fixed;
-  width: 200px;
+  width: 220px;
   height: 100%;
-  background-color: white;
-  left: -200px;
+  background-color: rgb(230, 225, 225);
+  left: -220px;
   transition: all 500ms linear;
   margin-top: 10vh;
   border: 1px solid grey;
+  z-index: 99;
+  overflow-y: auto; /* Cuando esta esta linea entonces <div className={styles.toggleBtn} onClick={toggleSidebar}>
+    <span>☰</span>
+</div> desaparece. pero si lo elimino aparece nuevamente*/
 }
-#sidebarPizarra h2 {
-  background-color: aqua;
+#sidebarPizarra h3 {
+  padding: 15px 0;
+  text-align: left;
+  padding-left: 20px;
 }
-#sidebarPizarra .listaEstructurasDatos {
-  background-color: red;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  width: 100%;
+#sidebarPizarra h3:hover {
+  background-color: rgb(248, 237, 222);
+  cursor: pointer;
+  border-left: 5px solid black;
 }
-#sidebarPizarra .listaEstructurasDatos .Estructura {
-  width: 100%;
-  height: 60px;
-}
-#sidebarPizarra .listaEstructurasDatos .Estructura .imgEstructura {
-  height: 60px;
-  width: 60px;
+
+#diagramContainer {
+  top: 10vh;
+  width: 2316px;
+  height: 2000px;
+  background-image: url("public/cuadriculado.png");
+  opacity: 0.7;
+  position: absolute;
+  overflow: auto;
 }
 
 #sidebarPizarra.active {
   left: 0;
 }
 
-#sidebarPizarra .toggle-btn {
+#toggleBtn.active {
   position: absolute;
   left: 230px;
   top: 20px;
   cursor: pointer;
+  margin-top: 10vh;
+  padding-top: 0;
+  transition: all 500ms linear;
 }
 
-#sidebarPizarra .toggle-btn span {
+#toggleBtn span {
   display: block;
   width: 40px;
   text-align: center;
 }
 
+#toggleBtn {
+  left: 0;
+  top: 20px;
+  padding-top: 10vh;
+  transition: all 500ms linear;
+  position: fixed;
+  cursor: pointer;
+  z-index: 99;
+}
+
+/*scroll*/
+#sidebarPizarra::-webkit-scrollbar {
+  width: 5px; /* Cambia esto al grosor que desees */
+}
+
+#sidebarPizarra::-webkit-scrollbar-thumb {
+  background: #a8a7a7; /* Cambia esto al color que desees para la barra de desplazamiento */
+}
+
+#sidebarPizarra::-webkit-scrollbar-thumb:hover {
+  background: #969494; /* Cambia esto al color que desees cuando se pasa el cursor sobre la barra de desplazamiento */
+}
+
+.anchor-point {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+
+.anchor-point.top {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  z-index: 99999;
+  top: 0;
+  left: 50%;
+}
+
+.anchor-point.right {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  z-index: 99999;
+  top: 50%;
+  right: 0;
+}
+
+.anchor-point.left {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  z-index: 99999;
+  top: 50%;
+  left: 0;
+}
+
+.anchor-point.bottom {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  z-index: 99999;
+  bottom: 0;
+  left: 50%;
+}
+
 .pizarraManipular {
   background-color: white;
   padding-top: 10vh;
-  padding-left: 200px;
+  padding-left: 220px;
   height: 90vh;
 }
 

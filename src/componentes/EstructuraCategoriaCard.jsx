@@ -1,24 +1,23 @@
 import styles from '/css/EstructuraCategoriaCard.module.css'
 import PropTypes from 'prop-types';
-
 function EstructuraCategoriaCard(props) {
-
     return (
-        <>
         <ul className={styles.listaEstructurasDatos} id={styles.animacion}>
             {props.images.map((image, index) => {
                 let imageStyle = image.cuadrado ? {height: '120px'} : {height: '40px'};
                 return (
-                    <li key={index} className={styles.Estructura} >
-                        <img className={styles.imgEstructura} style={imageStyle} src={`public/estructuras-de-datos/${image.nameImg}.png`} alt={image.altImg}/>
+                    <li key={index} className={styles.Estructura}>
+                        <img className={styles.imgEstructura} style={imageStyle} src={`public/estructuras-de-datos/${image.nameImg}.png`} alt={image.altImg}
+                        draggable="true" onDragStart={(event) => 
+                            event.dataTransfer.setData("text", image.nameImg)
+                        }
+                        />
                     </li>
                 );
             })}
         </ul>
-        </>
     );
 }
-
 EstructuraCategoriaCard.propTypes = {
     images: PropTypes.arrayOf(
         PropTypes.shape({
@@ -28,6 +27,4 @@ EstructuraCategoriaCard.propTypes = {
         })
     ).isRequired,
 };
-
-
 export default EstructuraCategoriaCard;

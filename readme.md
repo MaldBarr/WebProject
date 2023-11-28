@@ -7,6 +7,9 @@ npm install jquery --save
 npm i --save-dev @types/jquery
 npm install prop-types
 npm install react-icons --save
+npm install react-konva konva (desinstalado)
+npm install react-dnd react-dnd-html5-backend (solo drag and drop)
+
 
 
 Ejecutar este comando cada que se entra al proyecto para que este actualizado:

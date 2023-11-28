@@ -11,6 +11,8 @@ $widthSidebarPizarra : 220px;
     transition: all 500ms linear;
     margin-top:$heightHeader;
     border: $border;
+    z-index: 99;
+
     overflow-y: auto; /* Cuando esta esta linea entonces <div className={styles.toggleBtn} onClick={toggleSidebar}>
     <span>☰</span>
 </div> desaparece. pero si lo elimino aparece nuevamente*/
@@ -26,7 +28,18 @@ $widthSidebarPizarra : 220px;
     }
    
 }
+#diagramContainer{
+    //left:$widthSidebarPizarra;
+    top:$heightHeader;
+    width: 1536px -$widthSidebarPizarra + 1000px;
+//    height: 100 - $heightHeader ;
+    height: 2000px;
+    background-image: url("public/cuadriculado.png");
+    opacity: 0.7;
+    position:absolute;
+    overflow: auto;
 
+}
 
 #sidebarPizarra.active{
     left: 0;
@@ -54,6 +67,7 @@ $widthSidebarPizarra : 220px;
     transition: all 500ms linear;
     position: fixed;
     cursor: pointer;
+    z-index:  99;
 
 }
 
@@ -68,4 +82,54 @@ $widthSidebarPizarra : 220px;
 
 #sidebarPizarra::-webkit-scrollbar-thumb:hover {
     background: #969494; /* Cambia esto al color que desees cuando se pasa el cursor sobre la barra de desplazamiento */
+}
+
+.anchor-point {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+.anchor-point.top{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    z-index: 99999;
+        top: 0;
+        left: 50%;
+    
+    
+}
+.anchor-point.right{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    z-index: 99999;
+    top: 50%;
+    right: 0;
+    
+    
+}
+.anchor-point.left{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    z-index: 99999;
+    top: 50%;
+    left: 0;
+    
+    
+}
+.anchor-point.bottom{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    z-index: 99999;
+    bottom: 0;
+    left: 50%;
+    
+    
 }

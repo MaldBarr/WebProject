@@ -1,3 +1,312 @@
+@charset "UTF-8";
+.BTHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6bc81;
+  width: 100%;
+  /*padding: 30px 0;*/
+  position: fixed; /**/
+  height: 10vh;
+  z-index: 100;
+  border: 1px solid grey;
+  /*max-width: 1280px;*/
+}
+.BTHeader a .logo {
+  margin-left: 30px;
+  max-height: 80px;
+}
+.BTHeader nav {
+  margin-right: 80px;
+}
+.BTHeader nav .listaRedirecciones {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 {
+  padding: 10px;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 a { /*a == Link*/
+  text-decoration: none !important;
+  color: black;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 a:hover {
+  color: white;
+  font-weight: bold;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 {
+  padding: 4px;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 a svg {
+  width: 45px;
+  height: 45px;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 a svg:hover {
+  fill: rgb(248, 237, 222);
+  transition: fill 0.2s ease-in-out;
+}
+.BTHeader nav .menuButton {
+  display: none;
+}
 
+@media screen and (max-width: 350px) {
+  .BTHeader a .logo {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .BTHeader {
+    height: auto;
+  }
+  .BTHeader a .logo {
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .BTHeader ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+  .BTHeader ul .redireccion1 { /*se esconde opcion 1*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion1.open {
+    display: block;
+  }
+  .BTHeader ul .redireccion2 { /*se esconde opcion 2*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion2.open {
+    display: block;
+  }
+  .BTHeader nav {
+    margin-right: 0px;
+  }
+  .BTHeader nav .menuButton {
+    display: block;
+    margin-right: 10px; /*se muestra el boton que contiene a opcion1 y opcion2*/
+  }
+}
+.BTHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6bc81;
+  width: 100%;
+  /*padding: 30px 0;*/
+  position: fixed; /**/
+  height: 10vh;
+  z-index: 100;
+  border: 1px solid grey;
+  /*max-width: 1280px;*/
+}
+.BTHeader a .logo {
+  margin-left: 30px;
+  max-height: 80px;
+}
+.BTHeader nav {
+  margin-right: 80px;
+}
+.BTHeader nav .listaRedirecciones {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 {
+  padding: 10px;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 a { /*a == Link*/
+  text-decoration: none !important;
+  color: black;
+}
+.BTHeader nav .listaRedirecciones .redireccion1 a:hover {
+  color: white;
+  font-weight: bold;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 {
+  padding: 4px;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 a svg {
+  width: 45px;
+  height: 45px;
+}
+.BTHeader nav .listaRedirecciones .redireccion2 a svg:hover {
+  fill: rgb(248, 237, 222);
+  transition: fill 0.2s ease-in-out;
+}
+.BTHeader nav .menuButton {
+  display: none;
+}
+
+@media screen and (max-width: 350px) {
+  .BTHeader a .logo {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .BTHeader {
+    height: auto;
+  }
+  .BTHeader a .logo {
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .BTHeader ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+  .BTHeader ul .redireccion1 { /*se esconde opcion 1*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion1.open {
+    display: block;
+  }
+  .BTHeader ul .redireccion2 { /*se esconde opcion 2*/
+    padding: 0px;
+    display: none;
+  }
+  .BTHeader ul .redireccion2.open {
+    display: block;
+  }
+  .BTHeader nav {
+    margin-right: 0px;
+  }
+  .BTHeader nav .menuButton {
+    display: block;
+    margin-right: 10px; /*se muestra el boton que contiene a opcion1 y opcion2*/
+  }
+}
+#sidebarPizarra {
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  background-color: rgb(230, 225, 225);
+  left: -220px;
+  transition: all 500ms linear;
+  margin-top: 10vh;
+  border: 1px solid grey;
+  z-index: 99;
+  overflow-y: auto; /* Cuando esta esta linea entonces <div className={styles.toggleBtn} onClick={toggleSidebar}>
+    <span>☰</span>
+</div> desaparece. pero si lo elimino aparece nuevamente*/
+}
+#sidebarPizarra h3 {
+  padding: 15px 0;
+  text-align: left;
+  padding-left: 20px;
+}
+#sidebarPizarra h3:hover {
+  background-color: rgb(248, 237, 222);
+  cursor: pointer;
+  border-left: 5px solid black;
+}
+
+#diagramContainer {
+  top: 10vh;
+  width: 2316px;
+  height: 2000px;
+  background-image: url("public/cuadriculado.png");
+  opacity: 0.7;
+  position: absolute;
+  overflow: auto;
+}
+
+#sidebarPizarra.active {
+  left: 0;
+}
+
+#toggleBtn.active {
+  position: absolute;
+  left: 230px;
+  top: 20px;
+  cursor: pointer;
+  margin-top: 10vh;
+  padding-top: 0;
+  transition: all 500ms linear;
+}
+
+#toggleBtn span {
+  display: block;
+  width: 40px;
+  text-align: center;
+}
+
+#toggleBtn {
+  left: 0;
+  top: 20px;
+  padding-top: 10vh;
+  transition: all 500ms linear;
+  position: fixed;
+  cursor: pointer;
+  z-index: 99;
+}
+
+/*scroll*/
+#sidebarPizarra::-webkit-scrollbar {
+  width: 5px; /* Cambia esto al grosor que desees */
+}
+
+#sidebarPizarra::-webkit-scrollbar-thumb {
+  background: #a8a7a7; /* Cambia esto al color que desees para la barra de desplazamiento */
+}
+
+#sidebarPizarra::-webkit-scrollbar-thumb:hover {
+  background: #969494; /* Cambia esto al color que desees cuando se pasa el cursor sobre la barra de desplazamiento */
+}
+
+.anchor-point {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+
+.anchor-point.top {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  z-index: 99999;
+  top: 0;
+  left: 50%;
+}
+
+.anchor-point.right {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  z-index: 99999;
+  top: 50%;
+  right: 0;
+}
+
+.anchor-point.left {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  z-index: 99999;
+  top: 50%;
+  left: 0;
+}
+
+.anchor-point.bottom {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  z-index: 99999;
+  bottom: 0;
+  left: 50%;
+}
+
+.pizarra {
+  padding-top: 10vh;
+  background-color: white;
+  height: 100vh;
+}
 
 /*# sourceMappingURL=pizarraManipular.module.css.map */
