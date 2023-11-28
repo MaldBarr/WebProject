@@ -2,6 +2,8 @@ import {Link} from 'react-router-dom';
 import styles from '/css/login.module.css';
 import $ from 'jquery';
 import { useNavigate } from 'react-router-dom';
+
+
     $(document).ready(function(){
         validateLogin();
 

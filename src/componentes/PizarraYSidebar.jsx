@@ -20,6 +20,7 @@ function PizarraYSidebar() {
         const img = document.createElement("img");
         img.src = `public/estructuras-de-datos/${imageName}.png`;
         img.style.position = 'absolute';
+        img.style.opacity = '1';
         // Restar la posición del contenedor de la posición del cursor
         const rect = event.target.getBoundingClientRect();
         img.onload = function () {
@@ -29,7 +30,6 @@ function PizarraYSidebar() {
         img.draggable = true;
         img.onmousedown = function (event) {
             event.preventDefault();
-            img.style.zIndex = 1000;
             let shiftX = event.clientX - img.getBoundingClientRect().left;
             let shiftY = event.clientY - img.getBoundingClientRect().top;
             function moveAt(pageX, pageY) {
@@ -104,11 +104,6 @@ function PizarraYSidebar() {
                 <h3 onClick={() => toggleSection('Arboles')}> Arboles </h3>
                 {activeSections.Arboles && <EstructuraCategoriaCard images={[{ nameImg: "ABB", altImg: "Binary three", 'cuadrado': true }]} />}
 
-                <h3 onClick={() => toggleSection('PilasColas')}> Pilas y colas </h3>
-                {activeSections.PilasColas && <EstructuraCategoriaCard images={[{ nameImg: "linkedList", altImg: "LinkedList", "cuadrado": false },
-                { nameImg: "linkedListWithGhostNode", altImg: "Linked list with ghost node" },
-                { nameImg: "DoubleLinkedlist", altImg: "Double linked list" },
-                { nameImg: "DoubleLinkedlistWithGhostNode", altImg: "Double linked list with ghost node", "cuadrado": false }]} />}
 
                 <h3 onClick={() => toggleSection('otros')}> Otros </h3>
                 {activeSections.otros && <EstructuraCategoriaCard images={[{ nameImg: "node", altImg: "Nodo", "cuadrado": true }]} />}

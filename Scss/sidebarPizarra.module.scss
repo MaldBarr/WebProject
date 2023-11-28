@@ -34,11 +34,21 @@ $widthSidebarPizarra : 220px;
     width: 1536px -$widthSidebarPizarra + 1000px;
 //    height: 100 - $heightHeader ;
     height: 2000px;
-    background-image: url("public/cuadriculado.png");
-    opacity: 0.7;
+   
     position:absolute;
     overflow: auto;
 
+}
+#diagramContainer::before {
+    content: "";
+    background-image: url("public/cuadriculado.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1; /* Ajusta este valor a la opacidad que desees */
+    z-index: -1;
 }
 
 #sidebarPizarra.active{
@@ -46,7 +56,7 @@ $widthSidebarPizarra : 220px;
 }
 
 #toggleBtn.active{
-    position: absolute;
+    position: fixed;
     left: 230px;
     top: 20px;
     cursor: pointer;

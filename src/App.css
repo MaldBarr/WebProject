@@ -4,6 +4,21 @@
   /*padding: 2rem;*/
   text-align: center;
 }
+/* Esto afectará a todas las barras de desplazamiento en tu página */
+::-webkit-scrollbar {
+  width: 6px; /* Ancho de la barra de desplazamiento vertical */
+  height: 6px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color del control deslizante de la barra de desplazamiento */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color del control deslizante de la barra de desplazamiento al pasar el mouse */
+}
+
 a{
   text-decoration: none;
 }

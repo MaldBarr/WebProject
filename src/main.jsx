@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter,Routes,Route} from "react-router-dom";
-
+import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 import AboutUs from './pages/aboutUs';
 import Cuenta from './pages/Cuenta';
@@ -15,27 +15,42 @@ import GestionUsuarios from './componentes/GestionUsuarios';
 
 import App from './App';
 import CuentaAdmin from './pages/CuentaAdmin';
+import '../css/transicionesPaginas.css';
+
+function Main() {
+    let location = useLocation();
+
+    return (
+        <TransitionGroup>
+            <CSSTransition
+                key={location.key}
+                classNames="fade"
+                timeout={300}
+            >
+                <Routes location={location}>
+                    <Route path="/" element={<App />} />
+                    <Route path="/inicioPagina" element={<Inicio />} />
+                    <Route path="/proyectos" element={<Proyectos />} />
+                    <Route path="/pizarra" element={<Pizarra />} />
+                    <Route path="/aboutus" element={<AboutUs />} />
+                    <Route path="/cuenta" element={<Cuenta />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/registro" element={<Registro />} />
+                    <Route path="/soporte" element={<Soporte />} />
+                    <Route path="/gestionUsuarios" element={<GestionUsuarios/>} />
+                    <Route path="/cuentaAdmin" element={<CuentaAdmin/>} />
+                </Routes>
+            </CSSTransition>
+        </TransitionGroup>
+    );
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    {/* CUANDO SE CREE UN ARCHIVO EN CARPETA PAGES QUE EMPIECE CON UNA MAYUSCULA*/}
-    <BrowserRouter>
-          {/*Aca poner todas las rutas existentes (Funciona como un if) */}
-          <Routes>
-                  {/* Path = "/" se carga siempre que se abre el host por defecto. */}
-                  <Route path="/" element={<App />} />
-                  <Route path="/inicioPagina" element={<Inicio />} />
-                  <Route path="/proyectos" element={<Proyectos />} />
-                  <Route path="/pizarra" element={<Pizarra />} />
-                  <Route path="/aboutus" element={<AboutUs />} />
-                  <Route path="/cuenta" element={<Cuenta />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/registro" element={<Registro />} />
-                  <Route path="/soporte" element={<Soporte />} />
-                  <Route path="/gestionUsuarios" element={<GestionUsuarios/>} />
-                  <Route path="/cuentaAdmin" element={<CuentaAdmin/>} />
-
-        </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
-)
+    <React.StrictMode>
+        <BrowserRouter>
+            <Routes>
+                <Route path="*" element={<Main />} />
+            </Routes>
+        </BrowserRouter>
+    </React.StrictMode>,
+);

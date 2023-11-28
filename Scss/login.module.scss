@@ -14,30 +14,44 @@ $red: #E62A44;
         background-color: $background;
         width: 50vw;
         height: 100%;
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+
         form{
             button{
-                background-color: white;
-                border:1px solid grey;
+
+                background-color: $red;
+                border:0px ;
                 border-radius: 5px;
-                color:black;
-                height: 22px;
+                color:rgb(255, 255, 255);
+                height: 27px;
                 width: 168px;
+                
             }
         }
 
     }
 
     .section2{
+        color: $background;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: $carton;
+        background-color: $red;
         width: 50vw;
         height: 100%;
+
         .optionsToGo{
             .links{
                 button{
                     margin: 0 5px;
+                    background-color: rgb(252, 169, 169);
+                    border:0px ;
+                    border-radius: 5px;
+                    height: 27px;
+                    width: 100px;
+                    color: black;
+
                 }
             }
         }

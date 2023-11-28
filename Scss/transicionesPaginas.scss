@@ -1,0 +1,64 @@
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+/*
+//SE AGRANDAN LOS COMPONENTES
+.fade-enter {
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+.fade-enter-active {
+    transform: scale(1);
+    opacity: 1;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.fade-exit-active {
+    transform: scale(0.5);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+*/
+/*.fade-enter {
+    transform: rotate(90deg);
+    opacity: 0;
+}
+
+.fade-enter-active {
+    transform: rotate(0deg);
+    opacity: 1;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+.fade-exit-active {
+    transform: rotate(-90deg);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+*/
