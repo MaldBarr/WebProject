@@ -71,6 +71,6 @@ app.get("/cuentaAdmin",(req:any,res:any)=>{
 app.delete("/cuentaAdmin",jsonParser,(req:any,res:any)=>{
     let username=req.body.username;
     connection.query('DELETE FROM usuarios WHERE username=?',[username],function(err:any,rows:any,fields:any){
-        res.send(JSON.stringify(rows));
+        res.send(JSON.stringify({"eliminado":true}));
     });
 })
