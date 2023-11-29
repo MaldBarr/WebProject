@@ -31,7 +31,7 @@ function GestionUsuarios() {
                     <thead>
                         <tr>
                             <th>Imagen</th>
-                            <th>Nombre</th>
+                            <th>Username</th>
                             <th>Email</th>
                             <th>Rut</th>
                             <th>Region</th>
@@ -41,7 +41,7 @@ function GestionUsuarios() {
                     </thead>
                     <tbody>
                         {usuarios.map((usuario, index) => (
-                            <UsuarioCard key={index} nombre={usuario.nombre} imgPerfil={usuario.imgPerfil} email={usuario.email} rut={usuario.rut} region={usuario.region} comuna={usuario.comuna}/>
+                            <UsuarioCard key={index} username={usuario.username} email={usuario.email} rut={usuario.rut} region={usuario.region} comuna={usuario.comuna}/>
                         ))}
                     </tbody>
                 </table>

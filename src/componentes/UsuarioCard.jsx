@@ -4,6 +4,7 @@ import styles from '/css/usuarioCard.module.css'
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
+import axios from 'axios';
 
 function UsuarioCard(props) {
     const [opcion, setOpcion] = useState('');
@@ -17,20 +18,30 @@ function UsuarioCard(props) {
         }
     };
 
+    function eliminarUser(){
+        console.log("Eliminar usuario");
+        axios.delete('http://localhost:3000/cuentaAdmin', {data: {username: props.username}}).then((response) => {
+            console.log("datos: "+response.data);
+            setOpcion(response.data);
+        }).catch((error) => {
+            console.log("no funciona"+error);
+        });
+    }
+
     return (
     <>  
     <tr className={styles.cardUsuario}>
         <td>
-            <img className={styles.imgPerfil}src={props.imgPerfil} alt="Imagen de perfil" />
+            <img className={styles.imgPerfil} alt="Imagen de perfil" />
         </td>
-        <td>{props.nombre}</td>
+        <td>{props.username}</td>
         <td>{props.email}</td>
         <td>{props.rut}</td>
         <td>{props.region}</td>
         <td>{props.comuna}</td>
         <div className={styles.opciones}>
-            <button value="eliminar" onClick={handleChange}><FaEdit /> </button>
-            <button value="modificar" onClick={handleChange}><MdDelete /> </button>
+            <button value="modificar" onClick={handleChange}><FaEdit /> </button>
+            <button value="eliminar" onClick={eliminarUser}><MdDelete /> </button>
             <button value="verMas" onClick={handleChange}><FaEye /></button>
         </div>
     </tr>
@@ -41,9 +52,8 @@ function UsuarioCard(props) {
 
 
 UsuarioCard.propTypes = {
-    key:PropTypes.string.isRequired,
-    nombre: PropTypes.string.isRequired,
-    imgPerfil: PropTypes.string.isRequired,
+    key: PropTypes.number.isRequired,
+    username: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     rut: PropTypes.string.isRequired,
     region: PropTypes.string.isRequired,
