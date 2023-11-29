@@ -3,9 +3,14 @@ import FetchRegiones from "../assets/fetchRegiones.jsx";
 import styles from '/css/login.module.css';
 import $ from 'jquery';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 
 function Registro() {
+    axios.get('http://localhost:3000/Registro').then((response) => {
+        console.log(response.data);
+    }).catch((error) => {
+        console.log(error);
+    });
     const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -146,10 +151,19 @@ function validateRegister(){
 
     if (contra == "") {
         $("#6").text("Ingresa una contraseña");
-    } else {
+    } 
+    else if(contra.length < 5 ){
+        $("#6").text("La contraseña no puede ser menor a 5 caracteres");
+    }
+    else if (!/[a-z]/.test(contra)) {
+        $("#6").text("La contraseña debe contener al menos una letra minúscula");
+    }
+    else if (!/[A-Z]/.test(contra)) {
+        $("#6").text("La contraseña debe contener al menos una letra mayúscula");
+    }
+    else {
         $("#6").text("");
         numCosasVerificadas+=1;
-
     }
     if (contra2 == ""){
         $("#7").text("No puede estar vacio");
@@ -165,7 +179,21 @@ function validateRegister(){
     } else{
         $("#8").text("Debes aceptar los terminos");
     }
-    if(numCosasVerificadas == 8) return true;
+    if(numCosasVerificadas == 8){
+        axios.post('http://localhost:3000/Registro', {data: {
+                username: nombre,
+                rut: rut,
+                email: email,
+                region: region,
+                comuna: comuna,
+                password: contra
+            }}).then((response) => {
+                console.log("datos: "+response.data);
+            }).catch((error) => {
+                console.log(error);
+            });
+        return true;
+    }
     return false;
 
 }
