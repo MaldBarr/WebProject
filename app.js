@@ -27,6 +27,7 @@ const configuracion = {
 app.listen(configuracion, () => {
     console.log('Servidor iniciado en http://localhost:' + configuracion.port);
 });
+//API-Rest Usuario
 app.get("/Registro", (req, res) => {
     connection.query('SELECT * FROM usuarios', function (err, rows, fields) {
         res.send(JSON.stringify(rows));
@@ -50,10 +51,38 @@ app.post("/Login", jsonParser, (req, res) => {
         res.send(JSON.stringify(rows));
     });
 });
-//Parte de administrador
+app.delete("/configuracionCuenta", jsonParser, (req, res) => {
+    let username = req.body.username;
+    let password = req.body.password;
+    connection.query('DELETE FROM usuarios WHERE username=? AND password=SHA1(?)', [username, password], function (err, rows, fields) {
+        res.send(JSON.stringify({ "eliminado": true }));
+    });
+});
+//API-REST Parte de administrador
 app.get("/cuentaAdmin", (req, res) => {
     connection.query('SELECT * FROM usuarios', function (err, rows, fields) {
         res.send(JSON.stringify(rows));
+    });
+});
+app.put("/cuentaAdmin", jsonParser, (req, res) => {
+    let username = req.body.username;
+    let rut = req.body.rut;
+    let email = req.body.email;
+    let region = req.body.region;
+    let comuna = req.body.comuna;
+    let password = req.body.password;
+    connection.query('INSERT INTO usuarios(username,rut,email,region,comuna,password) values(?,?,?,?,?,SHA1(?))', [username, rut, email, region, comuna, password], function (err, rows, fields) {
+        res.send(rows);
+    });
+});
+app.post("/cuentaAdmin", jsonParser, (req, res) => {
+    let username = req.body.username;
+    let rut = req.body.rut;
+    let region = req.body.region;
+    let comuna = req.body.comuna;
+    let password = req.body.password;
+    connection.query('UPDATE usuarios SET rut=?,region=?,comuna=?,password=SHA1(?) WHERE username=?', [rut, region, comuna, password, username], function (err, rows, fields) {
+        res.send(JSON.stringify({ "actualizado": true }));
     });
 });
 app.delete("/cuentaAdmin", jsonParser, (req, res) => {
