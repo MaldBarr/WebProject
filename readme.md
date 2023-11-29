@@ -8,6 +8,7 @@ npm i --save-dev @types/jquery
 npm install prop-types
 npm install react-icons --save
 npm install react-transition-group
+npm install axios
 
 NPMS INSTALADOS PERO NO UTILIZADOS AL FINAL:
 npm install react-konva konva (desinstalado)
