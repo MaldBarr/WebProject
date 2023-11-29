@@ -268,6 +268,23 @@
   flex: 1; /* Esto hace que cada columna tome la misma cantidad de espacio */
   padding: 10px; /* Añade un poco de espacio alrededor del texto */
 }
+.informacionCuenta button {
+  border: none;
+  border-radius: 10px;
+}
+.informacionCuenta .containerOpciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.informacionCuenta .containerOpciones .eliminarMiCuenta {
+  color: white;
+  background-color: red;
+  width: 100px;
+  height: 40px;
+}
 
 @media screen and (max-width: 300px) {
   .informacionCuenta {

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import UsuarioCard from './UsuarioCard'; // Asegúrate de que la ruta sea correcta
 import styles from '/css/gestionUsuarios.module.css'
+import { Link } from 'react-router-dom';
 
 function GestionUsuarios() {
     const [busqueda, setBusqueda] = useState('');
@@ -35,7 +36,9 @@ function GestionUsuarios() {
                     </tbody>
                 </table>
             </div>
-           
+            <Link to="/EliminarMiCuentaAdmin">
+                <button className={styles.eliminarMiCuenta}> Eliminar mi cuenta </button>
+            </Link>
         </div>
     );
 }

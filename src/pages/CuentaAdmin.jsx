@@ -8,7 +8,6 @@ function CuentaAdmin() {
         <Header/>
         <SidebarCuenta nombre='Admin' categorias={[
         {nombreCategoria: 'Administración', ruta: '/configurar-cuenta', predeterminado: true},
-        {nombreCategoria: 'Configurar Cuenta', ruta: '/configurar-cuenta', predeterminado: false},
         {nombreCategoria: 'Cerrar Sesión', ruta: '/InicioPagina', predeterminado: false}
         ]}/>
         <GestionUsuarios/>

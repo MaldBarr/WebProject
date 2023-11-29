@@ -16,8 +16,9 @@ $red: #E62A44;
         height: 100%;
         border-right: 2px solid black;
         border-left: 2px solid black;
-
+        
         form{
+           
             button{
 
                 background-color: $red;
@@ -70,12 +71,6 @@ $red: #E62A44;
         .section2{
             width: 100%;
 
-            .optionsToGo{
-                .links{
-                    button{
-                    }
-                }
-            }
         }   
     }
 }

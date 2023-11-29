@@ -49,21 +49,27 @@ function Registro() {
                     <FetchRegiones/>
                     <p id={4} />
             
-                    <input type="text" placeholder="Comuna" id="comuna" required="" />
+                    <input type="text" placeholder="Comuna" id="comuna" autoComplete="new-password"
+required="" />
                     <p id={5} />
             
-                    <input
-                        type="password"
-                        placeholder="Contraseña"
-                        id="password"
-                        required=""
+                   
+                    <input 
+                    type="password" 
+                    placeholder="Contraseña" 
+                    id="password" 
+                    autoComplete="new-password"
+                    required=""
                     />
+
                     <p id={6} />
             
                     <input
                         type="password"
                         placeholder="Confirmar Contraseña"
                         id="password2"
+                        autoComplete="new-password"
+
                         required=""
                     />
                     <p id={7} />
@@ -73,14 +79,18 @@ function Registro() {
                         <label><a href="terminosYcondiciones.md">Acepto terminos y condiciones</a>{" "}</label>
                     </div>
                     <p id={8} />
-            
+                    <div className="g-recaptcha" data-sitekey="6Ldq5R8pAAAAADi3Jv5bJquaJK4EeSi9UAVe3uH6" id={styles.recap}>
+                    
+                    </div>
+                    <p id={9} />
+
                 <button type="submit" id="submitRegister">Registrarse</button>
                 </form>
             </section>
         </div>
         </>
     );
-};
+}
 export default Registro;
 
 function validateRegister(){

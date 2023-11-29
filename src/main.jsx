@@ -12,6 +12,8 @@ import Registro from './pages/Registro';
 import Soporte from './pages/Soporte';
 import Inicio from './pages/inicio';
 import GestionUsuarios from './componentes/GestionUsuarios';
+import EliminarMiCuenta from './pages/EliminarMiCuenta';
+import EliminarMiCuentaAdmin from './pages/EliminarMiCuentaAdmin';
 
 import App from './App';
 import CuentaAdmin from './pages/CuentaAdmin';
@@ -37,6 +39,9 @@ function Main() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/registro" element={<Registro />} />
                     <Route path="/soporte" element={<Soporte />} />
+                    <Route path="/EliminarMiCuenta" element={<EliminarMiCuenta />} />
+                    <Route path="/EliminarMiCuentaAdmin" element={<EliminarMiCuentaAdmin />} />
+
                     <Route path="/gestionUsuarios" element={<GestionUsuarios/>} />
                     <Route path="/cuentaAdmin" element={<CuentaAdmin/>} />
                 </Routes>

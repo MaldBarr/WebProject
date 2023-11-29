@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import styles from '/css/InformacionCuenta.module.css'
+import { Link } from 'react-router-dom';
 
 function InformacionCuenta(props) {
     const [nombre, setNombre] = useState(props.nombre);
@@ -37,9 +38,14 @@ function InformacionCuenta(props) {
                         </p>
                     </div>
                 </div>
-               
+
             </div>
-            <button> Guardar cambios </button>
+            <div className={styles.containerOpciones}>
+                <button className={styles.guardar}> Guardar cambios </button>
+                <Link to = '/EliminarMiCuenta'>
+                <button className={styles.eliminarMiCuenta}> Eliminar mi cuenta </button>
+                </Link>
+            </div>
             
         </div>
         </>

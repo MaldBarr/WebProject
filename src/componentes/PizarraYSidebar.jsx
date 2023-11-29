@@ -61,15 +61,51 @@ function PizarraYSidebar() {
                 anchor.style.border = '1px solid black';
                 anchor.style.backgroundColor = 'white';
                 wrapper.appendChild(anchor);
-
+                /*
                 anchor.onmousedown = function (event) {
                     // Aquí puedes iniciar la creación de la flecha
-                };
+                };*/
             }
             // Añadir el contenedor al objetivo
             event.target.appendChild(wrapper);
         };
+        img.oncontextmenu = function(event) {
+            // Prevenir el menú contextual predeterminado
+            event.preventDefault();
+        
+            // Crear el menú contextual
+            const menu = document.createElement('div');
+            menu.style.position = 'absolute';
+            menu.style.left = `${event.clientX}px`;
+            menu.style.top = `${event.clientY}px`;
+            menu.style.background = 'white';
+            menu.style.border = '1px solid black';
+            menu.style.padding = '10px';
+            menu.textContent = 'Eliminar';
+            // Cambiar el color de fondo al pasar el cursor sobre el menú
+menu.onmouseover = function() {
+    menu.style.background = 'lightgray';
+};
 
+// Cambiar el color de fondo al mover el cursor fuera del menú
+menu.onmouseout = function() {
+    menu.style.background = 'white';
+};
+            // Cuando se hace clic en el menú, eliminar la imagen
+            menu.onclick = function() {
+                img.remove();
+                menu.remove();
+            };
+        
+            // Cuando se hace clic en cualquier otro lugar, eliminar el menú
+            document.body.onclick = function() {
+                menu.remove();
+            };
+        
+            // Agregar el menú al documento
+            document.body.appendChild(menu);
+        };
+        
 
         event.target.appendChild(img);
     }
